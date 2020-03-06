@@ -1,16 +1,18 @@
-# New Project Dialog<a name="new-project-dialog"></a>
+# New Project Dialog Box<a name="new-project-dialog"></a>
 
-The **New Project** dialog in the AWS Toolkit for JetBrains displays whenever you [create an AWS serverless application](key-tasks.md#key-tasks-sam-create)\.
+The **New Project** dialog box in the AWS Toolkit for JetBrains is displayed when you [create an AWS serverless application](key-tasks.md#key-tasks-sam-create)\.
 
 **Topics**
-+ [New Project Dialog \(IntelliJ IDEA\)](#new-project-dialog-intellij)
-+ [New Project Dialog \(PyCharm\)](#new-project-dialog-pycharm)
++ [New Project Dialog Box \(IntelliJ IDEA\)](#new-project-dialog-intellij)
++ [New Project Dialog Box \(PyCharm\)](#new-project-dialog-pycharm)
++ [New Project Dialog Box \(WebStorm\)](#new-project-dialog-webstorm)
++ [New Project Dialog Box \(JetBrains Rider\)](#new-project-dialog-rider)
 
-## New Project Dialog \(IntelliJ IDEA\)<a name="new-project-dialog-intellij"></a>
+## New Project Dialog Box \(IntelliJ IDEA\)<a name="new-project-dialog-intellij"></a>
 
-![\[The New Project dialog for IntelliJ IDEA\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+![\[The New Project dialog box for IntelliJ IDEA\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-The **New Project** dialog contains the following items\.
+The **New Project** dialog box contains the following items\.
 
 **Project name**  
 *Required*\. The name of the project\.
@@ -19,7 +21,7 @@ The **New Project** dialog contains the following items\.
 *Required*\. The location where IntelliJ IDEA will create the project\.
 
 **Runtime**  
-*Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for Lambda to use\.
+*Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for AWS Lambda to use\.
 
 **SAM Template**  
 *Required*\. The name of the AWS Serverless Application Model \(AWS SAM\) template to use\.
@@ -39,11 +41,11 @@ The **New Project** dialog contains the following items\.
 **Project format**  
 *Required*\. The format of the project that IntelliJ IDEA will create\. For more information, see [Project formats](https://www.jetbrains.com/help/idea/creating-and-managing-projects.html#project-formats) on the IntelliJ IDEA Help website\.
 
-## New Project Dialog \(PyCharm\)<a name="new-project-dialog-pycharm"></a>
+## New Project Dialog Box \(PyCharm\)<a name="new-project-dialog-pycharm"></a>
 
-![\[The New Project dialog for PyCharm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+![\[The New Project dialog box for PyCharm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-The **New Project** dialog contains the following items\.
+The **New Project** dialog box contains the following items\.
 
 **Location**  
 *Required*\. The location where PyCharm will create the project\. For more information, see [Project](https://www.jetbrains.com/help/pycharm/project.html) on the PyCharm Help website\.
@@ -52,4 +54,58 @@ The **New Project** dialog contains the following items\.
 *Required*\. The name of the AWS Serverless Application Model \(AWS SAM\) template to use\.
 
 **New environment using / Existing interpreter**  
-Either **New environment using** or **Existing interpreter** is *required* \(but not both\)\. Information about the interpreter that PyCharm will use when creating the project\. For more information, see [Configure a Python interpreter](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#Configuring__language__Interpreter.xml) on the PyCharm Help website\.
+Either **New environment using** or **Existing interpreter** is *required* \(but not both\)\. Provides information about the interpreter that PyCharm will use when creating the project\. For more information, see [Configure a Python interpreter](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#Configuring__language__Interpreter.xml) on the PyCharm Help website\.
+
+## New Project Dialog Box \(WebStorm\)<a name="new-project-dialog-webstorm"></a>
+
+![\[The New Project dialog box for WebStorm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+The **New Project** dialog box contains the following items\.
+
+**Location**  
+*Required*\. The location where WebStorm will create the project\.
+
+**Runtime**  
+*Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for AWS Lambda to use\.
+
+**SAM Template**  
+*Required*\. The name of the AWS SAM template to use\.
+
+**Node interpreter**  
+*Required*\. The location where the Node\.js interpreter is installed\.
+
+## New Project Dialog Box \(JetBrains Rider\)<a name="new-project-dialog-rider"></a>
+
+**Note**  
+When you create a new solution, this dialog box will contain the title **New Solution** instead of **New Project**\. However, the dialog box's contents are the same\.
+
+![\[The New Project dialog box for JetBrains Rider\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+The **New Project** dialog box contains the following items\.
+
+**Solution name**  
+*Required*\. The name of the solution\.
+
+**Project name**  
+*Required*\. The name of the project\.
+
+**Solution directory**  
+*Required*\. The path to the solution's directory\.
+
+**Put solution and project in the same directory**  
+*Optional*\. If selected, puts the solution's files in the same location as the project's files\.
+
+**Create repository**  
+*Optional*\. If selected, creates a remote repository for the project with the specified provider\.
+
+**Runtime**  
+*Required*\. The Lambda runtime to be used\.
+
+**SAM CLI executable**  
+*Required*\. The location where the SAM CLI is installed\.
+
+**SAM Template**  
+*Required*\. The name of the SAM template to use to create the project\.
+
+**Resulting project structure**  
+*Required*\. The paths for the project's directories and files that will be created\.

@@ -1,4 +1,4 @@
-# Working with AWS Lambda By Using the AWS Toolkit for JetBrains<a name="building-lambda"></a>
+# Working with AWS Lambda by Using the AWS Toolkit for JetBrains<a name="building-lambda"></a>
 
 The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS Lambda functions in an AWS account\.
 
