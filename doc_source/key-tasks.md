@@ -31,6 +31,7 @@ Use the following brief instructions to complete key tasks with the AWS Toolkit 
 + [Work with Amazon Elastic Container Service \(Amazon ECS\) clusters in an account](#key-tasks-ecs)
   + [Debug code in a cluster](#key-tasks-ecs-debug)
 + [Work with Amazon EventBridge schemas in an account](#key-tasks-eventbridge)
++ [Work with Amazon S3 buckets and objects in an account](#key-tasks-s3)
 
 ## Install the AWS Toolkit for JetBrains<a name="key-tasks-install"></a>
 
@@ -627,5 +628,13 @@ To make any changes later to this configuration, on the menu bar, choose **Run**
 ## Working with Amazon EventBridge Schemas<a name="key-tasks-eventbridge"></a>
 
 See [Working with Amazon EventBridge Schemas](eventbridge-schemas.md)\.
+
+[Top](#key-tasks)
+
+## Work with Amazon S3 Buckets and Objects<a name="key-tasks-s3"></a>
+
+After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then used the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon S3 buckets and objects in the account, as follows\.
++ [Work with Amazon S3 Buckets](work-with-S3-buckets.md)
++ [Work with Amazon S3 Objects](work-with-S3-objects.md)
 
 [Top](#key-tasks)

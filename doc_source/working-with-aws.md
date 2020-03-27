@@ -3,8 +3,9 @@
 The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS services in an AWS account\.
 
 **Topics**
-+ [AWS CloudFormation](cloudformation.md)
-+ [AWS Lambda](building-lambda.md)
 + [AWS Serverless](sam.md)
++ [AWS Lambda](building-lambda.md)
++ [AWS CloudFormation](cloudformation.md)
 + [Amazon ECS](ecs.md)
 + [Amazon EventBridge](eventbridge.md)
++ [Amazon S3](building-S3.md)
