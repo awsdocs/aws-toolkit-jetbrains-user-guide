@@ -20,7 +20,7 @@ You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#k
    + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[AWS no credentials selected on the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it is not already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
+   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[Configure AWS connection from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -122,7 +122,7 @@ After you connect, you might need to [switch to working with AWS resources in th
    + On the status bar, choose **AWS Connection Settings**\.
    + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **AWS Connection Settings**\.
 
-1. Choose the name of the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, first choose **All Credentials**, and then choose the name of the named profile to use\.   
+1. Choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, first choose **All Credentials**, and then choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use\.   
 ![\[Switching the current connection\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
    The AWS Toolkit for JetBrains switches to using the new connection\. This connection is now selected in the **AWS Connection Settings** menu in both the status bar and **AWS Explorer**\.

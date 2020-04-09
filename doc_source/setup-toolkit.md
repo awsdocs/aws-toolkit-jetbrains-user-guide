@@ -24,7 +24,7 @@ An access key contains both an *access key ID* value and a *secret access key* v
 1. Choose **Install**\.  
 ![\[Installing the AWS Toolkit for JetBrains\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 **Note**  
-To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, AWS Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
+To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
 
 1. When the **Third\-party Plugins Privacy Note** is displayed, choose **Accept**\.
 
@@ -32,7 +32,7 @@ To use the AWS Toolkit for JetBrains to work with its available features for AWS
 
 1. When prompted, choose **Restart**\.
 
-1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or AWS Lambda functions, you must first also install the following tools, if you haven't done so already\. These tools must be installed in the following order:
+1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or Lambda functions, you must first also install the following tools, if you haven't done so already\. These tools must be installed in the following order:
 
    1. [AWS Command Line Interface \(AWS CLI\)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 

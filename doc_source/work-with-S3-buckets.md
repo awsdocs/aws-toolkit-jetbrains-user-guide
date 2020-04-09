@@ -16,7 +16,7 @@ Every object you store in Amazon S3 resides in a bucket\. You can use buckets to
 
 1. In the **Create S3 Bucket** dialog box, enter a name for the bucket\.
 **Note**  
-Because S3 allows your bucket to be used as a URL that can be accessed publicly, the bucket name that you choose must be globally unique\. If some other account has already created a bucket with the name that you chose, you must use another name\. For more information, see [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Because Amazon S3 allows your bucket to be used as a URL that can be accessed publicly, the bucket name that you choose must be globally unique\. If some other account has already created a bucket with the name that you chose, you must use another name\. For more information, see [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 1. Choose **Create**\.
 
@@ -37,4 +37,4 @@ Because S3 allows your bucket to be used as a URL that can be accessed publicly,
 ![\[Deleting an AWS Lambda bucket in AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. Enter the bucket's name to confirm the deletion, and then choose **OK**\.
-   + If the bucket contains objects, the bucket is emptied before deletion\. A notification displays after the deletion is complete\.
+   + If the bucket contains objects, the bucket is emptied before deletion\. A notification is displayed after the deletion is complete\.

@@ -15,7 +15,7 @@ Use the following brief instructions to complete key tasks with the AWS Toolkit 
 + [Switch between Regions](#key-tasks-switch-region)
 + [Open AWS Explorer within the AWS Toolkit for JetBrains](#key-tasks-open-explorer)
 + [Work with AWS serverless applications in an account](#key-tasks-sam)
-  + [Create a serverless applications](#key-tasks-sam-create)
+  + [Create a serverless application](#key-tasks-sam-create)
   + [Deploy a serverless application](#key-tasks-sam-deploy)
   + [Change \(update\) the settings for a serverless application](#key-tasks-sam-update)
   + [Delete a serverless application](#key-tasks-sam-delete)
@@ -28,10 +28,11 @@ Use the following brief instructions to complete key tasks with the AWS Toolkit 
 + [Work with AWS CloudFormation stacks in an account](#key-tasks-cloudformation)
   + [View event logs for a stack](#key-tasks-cloudformation-logs)
   + [Delete a stack](#key-tasks-cloudformation-delete)
-+ [Work with Amazon Elastic Container Service \(Amazon ECS\) clusters in an account](#key-tasks-ecs)
++ [Work with Amazon ECS clusters in an account](#key-tasks-ecs)
   + [Debug code in a cluster](#key-tasks-ecs-debug)
 + [Work with Amazon EventBridge schemas in an account](#key-tasks-eventbridge)
 + [Work with Amazon S3 buckets and objects in an account](#key-tasks-s3)
++ [Work with Amazon CloudWatch Logs in an account](#key-tasks-cloudwatch)
 
 ## Install the AWS Toolkit for JetBrains<a name="key-tasks-install"></a>
 
@@ -57,7 +58,7 @@ An access key contains both an *access key ID* value and a *secret access key* v
 1. Choose **Install**\.  
 ![\[Installing the AWS Toolkit for JetBrains\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 **Note**  
-To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, AWS Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
+To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
 
 1. When the **Third\-party Plugins Privacy Note** is displayed, choose **Accept**\.
 
@@ -65,7 +66,7 @@ To use the AWS Toolkit for JetBrains to work with its available features for AWS
 
 1. When prompted, choose **Restart**\.
 
-1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or AWS Lambda functions, you must first also install the following tools, if you haven't done so already\. These tools must be installed in the following order:
+1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or Lambda functions, you must first also install the following tools, if you haven't done so already\. These tools must be installed in the following order:
 
    1. [AWS Command Line Interface \(AWS CLI\)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
@@ -124,7 +125,7 @@ We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-
    + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[AWS no credentials selected on the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](#key-tasks-open-explorer), if it is not already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
+   + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[Configure AWS connection from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -220,7 +221,7 @@ After you connect, you might need to [switch connections to work with](#key-task
    + On the status bar, choose **AWS Connection Settings**\.
    + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open, and then choose **AWS Connection Settings**\.
 
-1. Choose the name of the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, first choose **All Credentials**, and then choose the name of the named profile to use\.   
+1. Choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, first choose **All Credentials**, and then choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use\.   
 ![\[Switching the current connection\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
    The AWS Toolkit for JetBrains switches to using the new connection\. This connection is now selected in the **AWS Connection Settings** menu in both the status bar and **AWS Explorer**\.
@@ -407,7 +408,7 @@ Before you can use this procedure to delete a serverless application, you must f
 
 ## Work with AWS Lambda Functions<a name="key-tasks-lambda"></a>
 
-After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then used the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Lambda functions in the account, as follows\.
+After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Lambda functions in the account, as follows\.
 + [Create a function](#key-tasks-lambda-create)
 + [Run \(invoke\) or debug the local version of a function](#key-tasks-lambda-local)
 + [Run \(invoke\) the remote version of a function](#key-tasks-lambda-remote)
@@ -432,13 +433,13 @@ To complete this procedure, you must first [install the ](#key-tasks-install)AWS
 + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](#key-tasks-switch-region) to create the function in, do that now\. Then right\-click **Lambda**, and choose **Create new AWS Lambda**\.  
 ![\[Creating an AWS Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-  Complete the [Create Function dialog](create-function-dialog.md) box, and then choose **Create Function**\. The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment, and adds the function name to the **Lambda** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
+  Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\. The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment, and adds the function name to the **Lambda** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
 + Create a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html)\. 
 
-  To enable running \(invoking\) the remote version of the function, if you need to [switch to a different AWS Region](#key-tasks-switch-region) to create the function in, do that now\. Then in the code file, choose the **Lambda** icon in the gutter next to the function handler, and then choose **Create new AWS Lambda**\. Complete the [Create Function dialog](create-function-dialog.md) box, and then choose **Create Function**\.  
+  To enable running \(invoking\) the remote version of the function, if you need to [switch to a different AWS Region](#key-tasks-switch-region) to create the function in, do that now\. Then in the code file, choose the **Lambda** icon in the gutter next to the function handler, and then choose **Create new AWS Lambda**\. Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.  
 ![\[Creating an AWS Lambda function by starting from an existing function handler in a code file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 **Note**  
-If the **Lambda** icon isn't displayed in the gutter next to the function handler, you can try displaying it for the current project by selecting the following box in **Settings** / **Preferences**: **Tools **, **AWS**, **Project settings**, **Show gutter icons for all potential AWS Lambda handlers**\. Also, if the function handler is already defined in the corresponding AWS SAM template, the **Create new AWS Lambda** command won't appear\.
+If the **Lambda** icon isn't displayed in the gutter next to the function handler, you can try displaying it for the current project by selecting the following box in **Settings** / **Preferences**: **Tools**, **AWS**, **Project settings**, **Show gutter icons for all potential AWS Lambda handlers**\. Also, if the function handler is already defined in the corresponding AWS SAM template, the **Create new AWS Lambda** command won't appear\.
 
   After you choose **Create Function**, the AWS Toolkit for JetBrains creates a corresponding function in the Lambda service for the connected AWS account\. If the operation succeeds, after you refresh **AWS Explorer**, the **Lambda** list displays the name of the new function\.
 + If you already have a project that contains an AWS Lambda function, and if you need to first [switch to a different AWS Region](#key-tasks-switch-region) to create the function in, do that now\. Then in the code file that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), choose the **Lambda** icon in the gutter next to the function handler\. Choose **Create new AWS Lambda**, complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.  
@@ -466,7 +467,7 @@ If you want to run \(invoke\) or debug the local version of an AWS Lambda functi
    + With the **Project** tool window already open and displaying the project that contains the function, open the project's `template.yaml` file\. Choose the **Run** icon in the gutter next to the function's resource definition, and then choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.  
 ![\[Running or debugging the local version of a Lambda function by starting from the function definition in the AWS SAM template file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration dialog](edit-configuration-dialog.md) box if it is displayed, and then choose **Run** or **Debug**\. \(If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\.\) Results are displayed in the **Run** or **Debug** tool window\. 
+1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. \(If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\.\) Results are displayed in the **Run** or **Debug** tool window\. 
 
 [Top](#key-tasks)
 
@@ -484,33 +485,33 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 
    If you created the function as [part of an AWS serverless application](#key-tasks-lambda-create-app), you must also [deploy that application](#key-tasks-sam-deploy)\.
 
-   If you created the function by creating a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), then in the code file, choose the Lambda icon next to the function handler\. Then choose **Create new AWS Lambda**\. Complete the [Create Function dialog](create-function-dialog.md) box, and then choose **Create Function**\.
+   If you created the function by creating a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), then in the code file, choose the Lambda icon next to the function handler\. Then choose **Create new AWS Lambda**\. Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.
 
 1. With **Lambda** already expanded in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
 ![\[Running the remote version of a Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration dialog](edit-configuration-dialog.md) box if it is displayed, and then choose **Run**\. \(If the **Edit configuration** dialog box isn't displayed and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure starting from step 3\. If the configuration details are missing, expand **Templates, AWS Lambda**\. Then choose **Remote**, choose **OK**, and then repeat this procedure from the beginning\.\) Results are displayed in the **Run** tool window\. 
+1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run**\. \(If the **Edit configuration** dialog box isn't displayed and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure starting from step 3\. If the configuration details are missing, expand **Templates**, **AWS Lambda**\. Then choose **Remote**, choose **OK**, and then repeat this procedure from the beginning\.\) Results are displayed in the **Run** tool window\. 
 
 [Top](#key-tasks)
 
 ### Change \(Update\) the Configuration for a Function<a name="key-tasks-lambda-update"></a>
 
 Do one of the following:
-+ With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations dialog](run-debug-configurations-dialog.md) box, and then choose **OK**\.
++ With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.
 + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](#key-tasks-switch-region) that contains the function, do that now\. Expand **Lambda**, choose the name of the function to change the configuration for, and then do one of the following:
   + **Change settings such as the timeout, memory, environment variables, and execution role –** Right\-click the name of the function, and then choose **Update Function Configuration**\.  
 ![\[Choosing the Update Function Configuration command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-    Complete the [Update Configuration dialog](update-configuration-dialog.md) box, and then choose **Update**\. 
-  + **Change settings such as the input payload** – On the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations dialog](run-debug-configurations-dialog.md) box, and then choose **OK**\.  
+    Complete the [Update Configuration](update-configuration-dialog.md) dialog box, and then choose **Update**\. 
+  + **Change settings such as the input payload** – On the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.  
 ![\[Choosing the Edit Configurations command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
     If the configuration details are missing, first expand **Templates**, **AWS Lambda**, and then choose **Local** \(for the local version of the function\) or **Remote** \(for the remote version of that same function\)\. Choose **OK**, and then repeat this procedure from the beginning\.\)
   + **Change settings such as the function handler name or Amazon Simple Storage Service \(Amazon S3\) source bucket** – Right\-click the function name, and then choose **Update Function Code**\.  
 ![\[Choosing the Update Function Code command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-    Complete the [Update Code dialog](update-code-dialog.md) box, and then choose **Update**\.
-  + **Change other available property settings that are not listed in the preceding bullets** – Change those settings in the function's corresponding AWS SAM template file \(for example, in a file named `template.yaml` within the project\)\. 
+    Complete the [Update Code](update-code-dialog.md) dialog box, and then choose **Update**\.
+  + **Change other available property settings that aren't listed in the preceding bullets** – Change those settings in the function's corresponding AWS SAM template file \(for example, in a file named `template.yaml` within the project\)\. 
 
     For a list of available property settings, see [AWS::Serverless::Function](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction) in the [awslabs/serverless\-application\-model](https://github.com/awslabs/serverless-application-model/) repository on GitHub\. 
 
@@ -518,11 +519,11 @@ Do one of the following:
 
 ### Delete a Function<a name="key-tasks-lambda-delete"></a>
 
-You can use the AWS Toolkit for JetBrains to delete an AWS Lambda function that is [part of an AWS serverless application](#key-tasks-lambda-delete-sam)\. Or you can delete [a standalone Lambda function](#key-tasks-lambda-delete-standalone)\.
+You can use the AWS Toolkit for JetBrains to delete an AWS Lambda function that is [part of an AWS serverless application](#key-tasks-lambda-delete-sam)\. Or you can delete a [standalone Lambda function](#key-tasks-lambda-delete-standalone)\.
 
 #### Delete a Serverless Application that Contains a Function<a name="key-tasks-lambda-delete-sam"></a>
 
-See the instructions on [deleting a serverless application](#key-tasks-sam-delete), earlier in this topic\.
+See the instructions for [deleting a serverless application](#key-tasks-sam-delete), earlier in this topic\.
 
 [Top](#key-tasks)
 
@@ -545,7 +546,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 + [View event logs for a stack](#key-tasks-cloudformation-logs)
 + [Delete a stack](#key-tasks-cloudformation-delete)
 
-Currently you cannot use the AWS Toolkit for JetBrains to directly [create stacks](#key-tasks-cloudformation-create) or to [change stack settings](#key-tasks-cloudformation-change)\. However, you can do these tasks indirectly as part of working with AWS serverless applications and AWS Lambda functions, as follows\.
+Currently, you can't use the AWS Toolkit for JetBrains to directly [create stacks](#key-tasks-cloudformation-create) or to [change stack settings](#key-tasks-cloudformation-change)\. However, you can do these tasks indirectly as part of working with AWS serverless applications and AWS Lambda functions, as follows\.
 
 [Top](#key-tasks)
 
@@ -587,6 +588,14 @@ Currently, you can't use the AWS Toolkit for JetBrains to change the settings fo
 
 [Top](#key-tasks)
 
+## Work with Amazon CloudWatch Logs<a name="key-tasks-cloudwatch"></a>
+
+After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then used the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon CloudWatch Logs in the account, as follows\.
++ [Viewing CloudWatch log groups and log streams](viewing-CloudWatch-logs.md)
++ [Working with CloudWatch log events](working-CloudWatch-log-events.md)
+
+[Top](#key-tasks)
+
 ## Work with Amazon ECS Clusters<a name="key-tasks-ecs"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon ECS clusters in the account, as follows\. 
@@ -599,29 +608,29 @@ After you complete the [prerequisites](ecs-debug.md#ecs-prereqs), do the followi
 
 1. Expand **ECS**, and then expand **Clusters**\.
 
-1. Expand your Amazon ECS cluster, right\-click your service, and then choose **Enable Cloud Debugging**\. For example, in the following screen shot, the cluster is named **java**, and the service is named **java\-service**\.  
+1. Expand your Amazon ECS cluster, right\-click your service, and then choose **Enable Cloud Debugging**\. For example, in the following screenshot, the cluster is named **java**, and the service is named **java\-service**\.  
 ![\[Enabling cloud debugging in the AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. When prompted, choose your [Amazon ECS task role](ecs-debug.md#ecs-task-role), and then choose **OK**\.
 
-1. The status bar displays the message **Configuring Cloud Debugging resource**\. Wait until the **Build Output** tab of the **Build** tool window displays a successful configuration message\. \(A related pop\-up also displays in the bottom right corner\.\) This will take several minutes\.
+1. The status bar displays the message **Configuring Cloud Debugging resource**\. Wait until the **Build Output** tab of the **Build** tool window displays a successful configuration message\. \(A related pop\-up also is displayed in the lower\-right corner\.\) This will take several minutes\.
 **Note**  
-As you enable code debugging in your AWS account for the first time, the AWS Toolkit for JetBrains creates an Amazon S3 bucket in your AWS account\. The bucket's name follows the format of `do-not-delete-cloud-debug-Region-ID-account-ID`\. The JetBrains Toolkit stores information in this bucket to enable code debugging\. Do not delete this bucket or modify its contents\. If you do, code debugging might stop working or produce unexpected results\. If you accidentally delete or modify this bucket, the JetBrains Toolkit will try to recreate the bucket\. You can also force the JetBrains Toolkit to recreate the bucket by choosing **Enable Cloud Debugging** again as described earlier or by choosing **Disable Cloud Debugging** as described later in this procedure\.
+As you enable code debugging in your AWS account for the first time, the AWS Toolkit for JetBrains creates an Amazon S3 bucket in your AWS account\. The bucket's name follows the format of `do-not-delete-cloud-debug-Region-ID-account-ID`\. The JetBrains Toolkit stores information in this bucket to enable code debugging\. **Do not delete this bucket or modify its contents\.** If you do, code debugging might stop working or produce unexpected results\. If you accidentally delete or modify this bucket, the JetBrains Toolkit will try to recreate the bucket\. You can also force the JetBrains Toolkit to recreate the bucket by choosing **Enable Cloud Debugging** again as described earlier, or by choosing **Disable Cloud Debugging** as described later in this procedure\.
 
-1. With the code you want to debug displayed, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. A service displays with a debug icon next to it\. This indicates the service is now enabled for cloud debugging\. Right\-click the service with the debug icon, and then choose **Debug**\.  
+1. With the code you want to debug displayed, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. A service is displayed with a debug icon next to it\. This indicates the service is now enabled for cloud debugging\. Right\-click the service with the debug icon, and then choose **Debug**\.  
 ![\[Debugging an Amazon ECS service in the AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [**Edit configuration** dialog box](edit-configuration-dialog.md#edit-configuration-dialog-ecs), and then choose **Debug**\.
+1. Complete the [**Edit configuration**](edit-configuration-dialog.md#edit-configuration-dialog-ecs) dialog box, and then choose **Debug**\.
 **Note**  
-To make any changes later to this configuration, on the menu bar, choose **Run**, **Edit Configurations**\. Then expand **Amazon ECS Service Cloud Debug**, and choose the service's name\. 
+To make changes to this configuration later, on the menu bar, choose **Run**, **Edit Configurations**\. Then expand **Amazon ECS Service Cloud Debug**, and choose the service's name\. 
 
 1. Use the IDE's built\-in debugging tools to debug your code as usual\.
 
-1. If you make any changes to your code, you can start debugging again: in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Debug**\.
+1. If you make changes to your code, you can start debugging again: in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Debug**\.
 
-1. If you make any changes to the associated `Dockerfile`, you must rebuild and republish the Docker image, and then repeat this procedure from the beginning\.
+1. If you make changes to the associated `Dockerfile`, you must rebuild and republish the Docker image, and then repeat this procedure from the beginning\.
 
-1. To disable debugging, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Disable Cloud Debugging**\. A pop\-up displays, confirming that debugging is disabled\.
+1. To disable debugging, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Disable Cloud Debugging**\. A pop\-up is displayed, confirming that debugging is disabled\.
 
 [Top](#key-tasks)
 
