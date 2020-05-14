@@ -1,4 +1,4 @@
-# Deploying an AWS Serverless Application by Using the AWS Toolkit for JetBrains<a name="sam-deploy"></a>
+# Deploying an AWS serverless application by using the AWS Toolkit for JetBrains<a name="sam-deploy"></a>
 
 To complete this procedure, you must first [create the AWS serverless application](key-tasks.md#key-tasks-sam-create) that you want to deploy, if you haven't created it already\.
 **Note**  

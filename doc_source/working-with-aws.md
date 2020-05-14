@@ -1,4 +1,4 @@
-# Working with AWS Services by Using the AWS Toolkit for JetBrains<a name="working-with-aws"></a>
+# Working with AWS services by using the AWS Toolkit for JetBrains<a name="working-with-aws"></a>
 
 The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS services in an AWS account\.
 

@@ -1,4 +1,4 @@
-# Working with AWS Serverless Applications by Using the AWS Toolkit for JetBrains<a name="sam"></a>
+# Working with AWS serverless applications by using the AWS Toolkit for JetBrains<a name="sam"></a>
 
 The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS serverless applications in an AWS account\.
 

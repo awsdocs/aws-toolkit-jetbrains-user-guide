@@ -40,11 +40,11 @@ After you complete the preceding [prerequisites](#ecs-prereqs), you can debug yo
 1. Expand **ECS**, and then expand **Clusters**\.
 
 1. Expand your Amazon ECS cluster, right\-click your service, and then choose **Enable Cloud Debugging**\. For example, in the following screenshot, the cluster is named **java**, and the service is named **java\-service**\.  
-![\[Enabling cloud debugging in the AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+![\[Enabling cloud debugging in AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. When prompted, choose your [Amazon ECS task role](#ecs-task-role), and then choose **OK**\.
 
-1. The status bar displays the message **Configuring Cloud Debugging resource**\. Wait until the **Build Output** tab of the **Build** tool window displays a successful configuration message\. \(A related pop\-up also is displayed in the lower\-right corner\.\) This will take several minutes\.
+   The status bar displays the message **Configuring Cloud Debugging resource**\. Wait until the **Build Output** tab of the **Build** tool window displays a successful configuration message\. \(A related pop\-up also is displayed in the lower\-right corner\.\) This will take several minutes\.
 **Note**  
 As you enable code debugging in your AWS account for the first time, the AWS Toolkit for JetBrains creates an Amazon S3 bucket in your AWS account\. The bucket's name follows the format of `do-not-delete-cloud-debug-Region-ID-account-ID`\. The JetBrains Toolkit stores information in this bucket to enable code debugging\. **Do not delete this bucket or modify its contents\.** If you do, code debugging might stop working or produce unexpected results\. If you accidentally delete or modify this bucket, the JetBrains Toolkit will try to recreate the bucket\. You can also force the JetBrains Toolkit to recreate the bucket by choosing **Enable Cloud Debugging** again as described earlier, or by choosing **Disable Cloud Debugging** as described later in this procedure\.
 
@@ -57,7 +57,7 @@ To make changes to this configuration later, on the menu bar, choose **Run**, **
 
 1. Use the IDE's built\-in debugging tools to debug your code as usual\.
 
-1. If you make changes to your code, you can start debugging again: in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Debug**\.
+1. If you make changes to your code, you can start debugging again\. In the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Debug**\.
 
 1. If you make changes to the associated `Dockerfile`, you must rebuild and republish the Docker image, and then repeat this procedure from the beginning\.
 

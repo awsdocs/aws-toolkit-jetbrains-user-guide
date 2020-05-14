@@ -1,4 +1,4 @@
-# Changing \(Updating\) AWS Serverless Application Settings by Using the AWS Toolkit for JetBrains<a name="sam-update"></a>
+# Changing \(updating\) AWS Serverless application settings by using the AWS Toolkit for JetBrains<a name="sam-update"></a>
 
 You must first [deploy the AWS serverless application](key-tasks.md#key-tasks-sam-deploy) that you want to change, if you haven't deployed it already\.
 **Note**  

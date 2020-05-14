@@ -26,7 +26,7 @@ You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#k
 
 1. In the file, under `[default]`, for `aws_access_key_id`, replace `[accessKey1]` with your access key ID value \(for example, `AKIAIOSFODNN7EXAMPLE`\)\.
 
-   If prompted, select **I want to edit this file anyway**, and then choose **OK**\.
+   If prompted, choose **I want to edit this file anyway**, and then choose **OK**\.
 
 1. For `aws_secret_access_key`, replace `[secretKey1]` with your secret access key value \(for example, `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`\)\.
 
@@ -59,7 +59,7 @@ For more information, see [AWS CLI Configuration Variables](https://docs.aws.ama
 
 1. Save and then close the file\. The AWS Toolkit for JetBrains tries to connect to the account by using the preceding access key\. 
 
-   After connecting, you can use the AWS Toolkit for JetBrains to work with AWS resources in that account, such as [AWS serverless](key-tasks.md#key-tasks-sam) applications, [AWS Lambda](key-tasks.md#key-tasks-lambda) functions, and [AWS CloudFormation](key-tasks.md#key-tasks-cloudformation) stacks\.
+   After connecting, you can use the toolkit to work with AWS resources in that account, such as [AWS serverless](key-tasks.md#key-tasks-sam) applications, [AWS Lambda](key-tasks.md#key-tasks-lambda) functions, and [AWS CloudFormation](key-tasks.md#key-tasks-cloudformation) stacks\.
 
 You can also have [more than one connection](key-tasks.md#key-tasks-multiple-connect) available, so that you can [switch between them](key-tasks.md#key-tasks-switch-connect)\.
 
@@ -70,7 +70,7 @@ After you connect, the AWS Toolkit for JetBrains selects the default AWS Region 
 To check which connection the AWS Toolkit for JetBrains is currently using, do one of the following:
 + On the status bar, see the current connection displayed in the **AWS Connection Settings** area\.  
 ![\[The current connection in the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-+ [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it's not already open, and then choose **Show Options Menu** \(the gear icon\)\. Choose **AWS Connection Settings**\. The current connection is selected\.  
++ [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it's not already open, and then choose **Show Options Menu** \(the settings icon\)\. Choose **AWS Connection Settings**\. The current connection is selected\.  
 ![\[The current connection in AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 You can also have [more than one connection](key-tasks.md#key-tasks-multiple-connect) available, so that you can [switch between them](key-tasks.md#key-tasks-switch-connect)\.
@@ -84,10 +84,10 @@ To complete this procedure, you must first have the additional [access key](http
 1. With the additional access key ID value and secret access key value ready, do one of the following:
    + On the status bar, choose **AWS Connection Settings**, and then choose **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing to edit AWS credentials from the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the gear icon\)\. Choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
+   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the settings icon\)\. Choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing to edit AWS credentials from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. In the file, add a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) for each additional connection\. Profile names can contain only the uppercase letters `A` through `Z`, the lowercase letters `a` through `z`, the numbers `0` through `9`, the hyphen character \(`-`\), and the underscore character \(`_`\)\. Profile names must be less than 64 characters in length\. 
+1. In the file, add a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) for each additional connection\. Profile names can contain only the uppercase letters  **A** through **Z**, the lowercase letters **a** through **z**, the numbers **0** through **9**, the hyphen character \( **\-**\), and the underscore character \( **\_**\)\. Profile names must be less than 64 characters in length\. 
 
    For example, for a named profile named `myuser`, use the following format\.
 
@@ -97,8 +97,8 @@ To complete this procedure, you must first have the additional [access key](http
    aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
    ```
 **Note**  
-The AWS Toolkit for JetBrains currently supports named profiles with only the following characters: `A`\-`Z`, `a`\-`z`, `0`\-`9`, underscore \(`_`\), and hyphen \(`-`\)\.  
-The toolkit also currently supports only the following configuration variables:  
+The AWS Toolkit for JetBrains currently supports named profiles with only the following characters: **A**\-**Z**, **a**\-**z**, **0**\-**9**, underscore \(**\_**\), and hyphen \(**\-**\)\.  
+Currently, the toolkit supports only the following configuration variables:  
 `aws_access_key_id`
 `aws_secret_access_key`
 `aws_session_token`
@@ -122,10 +122,10 @@ After you connect, you might need to [switch to working with AWS resources in th
    + On the status bar, choose **AWS Connection Settings**\.
    + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **AWS Connection Settings**\.
 
-1. Choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, first choose **All Credentials**, and then choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use\.   
+1. Choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use for the new connection\. If it isn't listed, choose **All Credentials**, and then choose the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to use\.   
 ![\[Switching the current connection\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-   The AWS Toolkit for JetBrains switches to using the new connection\. This connection is now selected in the **AWS Connection Settings** menu in both the status bar and **AWS Explorer**\.
+   The AWS Toolkit for JetBrains switches to the new connection\. This connection is now selected in the **AWS Connection Settings** menu in both the status bar and **AWS Explorer**\.
 
 After you connect, you might need to [switch to working with AWS resources in that account that are in a different AWS Region](key-tasks.md#key-tasks-switch-region)\.
 
@@ -134,7 +134,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing the Edit AWS Credential files command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the gear icon\)\. Then choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
+   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the settings icon\)\. Then choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing the Edit AWS Credential files command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. Make your changes to the file, and then save and close the file\. 
@@ -144,7 +144,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing the Edit AWS Credential files command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the gear icon\)\. Then choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
+   + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the settings icon\)\. Then choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing the Edit AWS Credential files command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. In the file, completely delete the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) \(including the named profile's name, access key ID, and secret access key\) for the connection that you want to delete\.

@@ -6,7 +6,7 @@ Install the AWS Toolkit for JetBrains as follows\.
 
 1.  [Create an administrator user and group in AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html#getting-started_create-admin-group-console) in the account, if you haven't done that already\. 
 **Note**  
-We recommend that you create or use a special type of user and group in the account for the AWS Toolkit for JetBrains to use, which we call an *administrator* IAM user and group\. Although you can [create a regular IAM user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) in the account for the toolkit to use, this approach might not allow the toolkit to have full access to all of the AWS resources and AWS serverless applications in that account\. \(We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), using an [AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials) with the AWS Toolkit for JetBrains\.\)
+We recommend that you create or use a special type of user and group in the account for the AWS Toolkit for JetBrains to use, which we call an *administrator* IAM user and group\. Although you can [create a regular IAM user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) in the account for the toolkit to use, this approach might not allow the toolkit to have full access to all of the AWS resources and AWS serverless applications in that account\. We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), using an [AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#lock-away-credentials) with the AWS Toolkit for JetBrains\.
 
 1. [Create an access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) for the user, if you don't have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for that user already\. 
 **Note**  
@@ -18,21 +18,19 @@ An access key contains both an *access key ID* value and a *secret access key* v
 
 1. Choose **Plugins**\.
 
-1. On the **Marketplace** tab, in **Search plugins in marketplace**, begin entering `AWS Toolkit`\. When **AWS Toolkit by Amazon Web Services** is displayed, choose it\.  
+1. On the **Marketplace** tab, in **Search plugins in marketplace**, begin entering *AWS Toolkit*\. When **AWS Toolkit by Amazon Web Services** is displayed, choose it\.  
 ![\[Finding the AWS Toolkit\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. Choose **Install**\.  
 ![\[Installing the AWS Toolkit for JetBrains\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 **Note**  
-To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
+To use the AWS Toolkit for JetBrains to work with its available features for AWS CloudFormation, AWS Lambda, AWS Serverless, and Amazon ECS, you must install version 1\.8 or later of the AWS Toolkit\.
 
 1. When the **Third\-party Plugins Privacy Note** is displayed, choose **Accept**\.
 
-1. Choose **Restart IDE**\.
+1. Choose **Restart IDE**, and when prompted, choose **Restart**\.
 
-1. When prompted, choose **Restart**\.
-
-1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or Lambda functions, you must first also install the following tools, if you haven't done so already\. These tools must be installed in the following order:
+1. Before you can use the AWS Toolkit for JetBrains to develop, test, analyze, and deploy AWS serverless applications or Lambda functions, be sure you have the following tools installed\. Install the tools in this order:
 
    1. [AWS Command Line Interface \(AWS CLI\)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
@@ -40,7 +38,7 @@ To use the AWS Toolkit for JetBrains to work with its available features for AWS
 
    1. [AWS Serverless Application Model Command Line Interface \(AWS SAM CLI\)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 
-1. Before you can use the AWS Toolkit for JetBrains to debug code in Amazon ECS clusters, you must also complete additional steps\. For instructions, see the [prerequisites](ecs-debug.md#ecs-prereqs)\.
+1. Before you can use the AWS Toolkit for JetBrains to debug code in Amazon ECS clusters, you must complete additional steps\. For instructions, see the [prerequisites](ecs-debug.md#ecs-prereqs)\.
 
 1. After you install the AWS Toolkit for JetBrains \(and, if you're working with AWS serverless applications, Lambda functions, or Amazon ECS clusters, you've installed the preceding additional required tools, in order\), [connect to an AWS account for the first time](key-tasks.md#key-tasks-first-connect)\.
 
