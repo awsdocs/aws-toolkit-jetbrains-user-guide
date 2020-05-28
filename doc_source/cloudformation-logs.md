@@ -1,4 +1,4 @@
-# Viewing Event Logs for an AWS CloudFormation Stack by Using the AWS Toolkit for JetBrains<a name="cloudformation-logs"></a>
+# Viewing event logs for an AWS CloudFormation stack by using the AWS Toolkit for JetBrains<a name="cloudformation-logs"></a>
 
 1. [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\. If the stack is in an AWS Region that's different from the current one, [switch to a different AWS Region](key-tasks.md#key-tasks-switch-region) that contains it\.
 

@@ -1,4 +1,4 @@
-# Create Function Dialog Box<a name="create-function-dialog"></a>
+# Create Function dialog box<a name="create-function-dialog"></a>
 
 The **Create Function** dialog box in the AWS Toolkit for JetBrains is displayed when you [create a standalone AWS Lambda function](key-tasks.md#key-tasks-lambda-create-standalone)\.
 

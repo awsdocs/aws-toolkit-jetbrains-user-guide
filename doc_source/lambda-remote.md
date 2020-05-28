@@ -1,4 +1,4 @@
-# Running \(Invoking\) the Remote Version of an AWS Lambda Function by Using the AWS Toolkit for JetBrains<a name="lambda-remote"></a>
+# Running \(invoking\) the remote version of an AWS Lambda function by using the AWS Toolkit for JetBrains<a name="lambda-remote"></a>
 
 A *remote* version of an AWS Lambda function is a function whose source code already exists inside of the Lambda service for an AWS account\.
 

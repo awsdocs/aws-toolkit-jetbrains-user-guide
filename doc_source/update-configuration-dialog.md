@@ -1,4 +1,4 @@
-# Update Configuration Dialog Box<a name="update-configuration-dialog"></a>
+# Update Configuration dialog box<a name="update-configuration-dialog"></a>
 
 The **Update Configuration** dialog box in the AWS Toolkit for JetBrains is displayed whenever you [change \(update\) the configuration for an AWS Lambda function](key-tasks.md#key-tasks-lambda-update)\.
 

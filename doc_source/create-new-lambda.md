@@ -1,8 +1,8 @@
-# Creating an AWS Lambda Function by Using the AWS Toolkit for JetBrains<a name="create-new-lambda"></a>
+# Creating an AWS Lambda function by using the AWS Toolkit for JetBrains<a name="create-new-lambda"></a>
 
 You can use the AWS Toolkit for JetBrains to create an AWS Lambda function that is part of an AWS serverless application\. Or you can create a standalone Lambda function\.
 
-To create a Lambda function that is part of an AWS serverless application, skip the rest of this topic and see [Creating an Application](deploy-serverless-app.md) instead\.
+To create a Lambda function that is part of an AWS serverless application, skip the rest of this topic and see [Creating an application](deploy-serverless-app.md) instead\.
 
 To create a standalone Lambda function, you must first [install the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install) and, if you haven't yet, [connect to an AWS account for the first time](key-tasks.md#key-tasks-first-connect)\. Then, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do one of the following:
 + [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](key-tasks.md#key-tasks-switch-region) to create the function in, do that now\. Then right\-click **Lambda**, and choose **Create new AWS Lambda**\.  

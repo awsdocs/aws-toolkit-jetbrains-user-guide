@@ -1,4 +1,4 @@
-# Working with Amazon EventBridge Schemas<a name="eventbridge-schemas"></a>
+# Working with Amazon EventBridge schemas<a name="eventbridge-schemas"></a>
 
 You can use the AWS Toolkit for JetBrains to work with Amazon EventBridge Schemas as follows\.
 
@@ -8,12 +8,12 @@ Working with EventBridge Schemas is currently supported only by the AWS Toolkit 
 The following information assumes you have already [set up the AWS Toolkit for JetBrains](getting-started.md)\.
 
 **Contents**
-+ [View a Schema](#eventbridge-schemas-view)
-+ [Find a Schema](#eventbridge-schemas-find)
-+ [Generate Code for a Schema](#eventbridge-schemas-generate-code)
-+ [Create an AWS SAM Application that Uses a Schema](#eventbridge-schemas-serverless-app)
++ [View a schema](#eventbridge-schemas-view)
++ [Find a schema](#eventbridge-schemas-find)
++ [Generate code for a schema](#eventbridge-schemas-generate-code)
++ [Create an AWS SAM application that uses a schema](#eventbridge-schemas-serverless-app)
 
-## View an Available Schema<a name="eventbridge-schemas-view"></a>
+## View an available schema<a name="eventbridge-schemas-view"></a>
 
 1. With the [**AWS Explorer**](aws-explorer.md) tool window displayed, expand **Schemas**\.
 
@@ -21,7 +21,7 @@ The following information assumes you have already [set up the AWS Toolkit for J
 
 1. To view the schema in the editor, right\-click the title of the schema, and on the context menu, choose **View Schema**\. 
 
-## Find an Available Schema<a name="eventbridge-schemas-find"></a>
+## Find an available schema<a name="eventbridge-schemas-find"></a>
 
 With the [**AWS Explorer**](aws-explorer.md) tool window displayed, do one of the following:
 + Begin typing the title of the schema you want to find\. The **AWS Explorer** highlights the titles of schemas that contain a match\.
@@ -32,7 +32,7 @@ To view a schema in the list of matches, do one of the following:
 + To display the schema in the editor, in **AWS Explorer**, right\-click the title of the schema, and then choose **View Schema**\. 
 + In the **Search EventBridge Schemas** dialog box, choose the title of the schema to display the schema\. 
 
-## Generate Code for an Available Schema<a name="eventbridge-schemas-generate-code"></a>
+## Generate code for an available schema<a name="eventbridge-schemas-generate-code"></a>
 
 1. With the [**AWS Explorer**](aws-explorer.md) tool window displayed, expand **Schemas**\.
 
@@ -47,7 +47,7 @@ To view a schema in the list of matches, do one of the following:
 
 1. Choose **Download**\.
 
-## Create an AWS Serverless Application Model Application that Uses an Available Schema<a name="eventbridge-schemas-serverless-app"></a>
+## Create an AWS Serverless Application Model application that uses an available schema<a name="eventbridge-schemas-serverless-app"></a>
 
 1. On the **File** menu, choose **New**, **Project**\. 
 

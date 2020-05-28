@@ -3,10 +3,10 @@
 When you configure the AWS Toolkit for JetBrains to connect to an AWS account, the toolkit sets the default AWS Region automatically\. This topic describes how to get the current AWS Region or to change it\.
 
 **Topics**
-+ [Getting the Current AWS Region](#setup-region-current-region)
++ [Getting the current AWS Region](#setup-region-current-region)
 + [Switching AWS Regions](#setup-region-switch-region)
 
-## Getting the Current AWS Region<a name="setup-region-current-region"></a>
+## Getting the current AWS Region<a name="setup-region-current-region"></a>
 
 To check which AWS Region the AWS Toolkit for JetBrains is currently using, do one of the following:
 + On the status bar, see the current Region displayed in the **AWS Connection Settings** area\.  

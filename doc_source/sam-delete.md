@@ -1,4 +1,4 @@
-# Deleting an AWS Serverless Application by Using the AWS Toolkit for JetBrains<a name="sam-delete"></a>
+# Deleting an AWS serverless application by using the AWS Toolkit for JetBrains<a name="sam-delete"></a>
 
 You must first [deploy the AWS serverless application](key-tasks.md#key-tasks-sam-deploy) that you want to delete, if you haven't deployed it already\.
 

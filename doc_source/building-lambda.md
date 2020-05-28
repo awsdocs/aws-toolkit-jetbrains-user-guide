@@ -1,10 +1,10 @@
-# Working with AWS Lambda by Using the AWS Toolkit for JetBrains<a name="building-lambda"></a>
+# Working with AWS Lambda by using the AWS Toolkit for JetBrains<a name="building-lambda"></a>
 
 The following topics describe how to use the AWS Toolkit for JetBrains to work with AWS Lambda functions in an AWS account\.
 
 **Topics**
-+ [Creating a Function](create-new-lambda.md)
-+ [Running \(Invoking\) or Debugging a Local Function](invoke-lambda.md)
-+ [Running \(Invoking\) a Remote Function](lambda-remote.md)
-+ [Changing \(Updating\) Function Settings](lambda-update.md)
-+ [Deleting a Function](lambda-delete.md)
++ [Creating a function](create-new-lambda.md)
++ [Running \(invoking\) or debugging a local function](invoke-lambda.md)
++ [Running \(invoking\) a remote function](lambda-remote.md)
++ [Changing \(updating\) function settings](lambda-update.md)
++ [Deleting a function](lambda-delete.md)

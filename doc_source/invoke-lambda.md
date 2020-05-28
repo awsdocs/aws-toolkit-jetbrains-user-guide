@@ -1,4 +1,4 @@
-# Running \(Invoking\) or Debugging the Local Version of an AWS Lambda Function by Using the AWS Toolkit for JetBrains<a name="invoke-lambda"></a>
+# Running \(invoking\) or debugging the local version of an AWS Lambda function by using the AWS Toolkit for JetBrains<a name="invoke-lambda"></a>
 
 To complete this procedure, you must [create the AWS Lambda function](key-tasks.md#key-tasks-lambda-create) that you want to run \(invoke\) or debug, if you have not created it already\.
 **Note**  

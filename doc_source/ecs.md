@@ -3,4 +3,4 @@
 The following topics describe how to use the AWS Toolkit for JetBrains to work with Amazon ECS resources in an AWS account\.
 
 **Topics**
-+ [Debugging Code in a Cluster](ecs-debug.md)
++ [Debugging code in a cluster](ecs-debug.md)

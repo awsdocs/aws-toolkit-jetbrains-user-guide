@@ -1,13 +1,13 @@
-# Working with Amazon S3 Buckets by Using the AWS Toolkit for JetBrains<a name="work-with-S3-buckets"></a>
+# Working with Amazon S3 buckets by using the AWS Toolkit for JetBrains<a name="work-with-S3-buckets"></a>
 
 Every object you store in Amazon S3 resides in a bucket\. You can use buckets to group related objects in the same way that you use a directory to group files in a file system\.
 
 **Topics**
-+ [Creating an Amazon S3 Bucket](#creating-s3-bucket)
-+ [Viewing Amazon S3 Buckets](#viewing-s3-bucket)
-+ [Deleting an Amazon S3 Bucket](#deleting-s3-buckets)
++ [Creating an Amazon S3 bucket](#creating-s3-bucket)
++ [Viewing Amazon S3 buckets](#viewing-s3-bucket)
++ [Deleting an Amazon S3 bucket](#deleting-s3-buckets)
 
-## Creating an Amazon S3 Bucket<a name="creating-s3-bucket"></a>
+## Creating an Amazon S3 bucket<a name="creating-s3-bucket"></a>
 
 1. [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\.
 
@@ -20,14 +20,14 @@ Because Amazon S3 allows your bucket to be used as a URL that can be accessed pu
 
 1. Choose **Create**\.
 
-## Viewing Amazon S3 Buckets<a name="viewing-s3-bucket"></a>
+## Viewing Amazon S3 buckets<a name="viewing-s3-bucket"></a>
 
 1. [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already open\.
 
 1. Click the **Amazon S3** node to expand the list of buckets\.
    + The S3 buckets for the [current AWS Region](setup-region.md#setup-region-current-region) are displayed beneath the **Amazon S3** node\.
 
-## Deleting an Amazon S3 Bucket<a name="deleting-s3-buckets"></a>
+## Deleting an Amazon S3 bucket<a name="deleting-s3-buckets"></a>
 
 1. [Open AWS Explorer](key-tasks.md#key-tasks-open-explorer), if it isn't already\.
 

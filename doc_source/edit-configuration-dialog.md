@@ -1,10 +1,10 @@
-# Edit Configuration Dialog Box<a name="edit-configuration-dialog"></a>
+# Edit Configuration dialog box<a name="edit-configuration-dialog"></a>
 
 The **Edit configuration** dialog box in the AWS Toolkit for JetBrains is displayed when you [change \(update\) the configuration for an AWS Lambda function](key-tasks.md#key-tasks-lambda-update) or [debug code in an Amazon ECS cluster](key-tasks.md#key-tasks-ecs-debug)\.
 + [Edit Configuration Dialog Box \(Lambda Function\)](#edit-configuration-dialog-lambda)
 + [Edit Configuration Dialog Box \(Amazon ECS Cluster\)](#edit-configuration-dialog-ecs)
 
-## Edit Configuration Dialog Box \(Lambda Function\)<a name="edit-configuration-dialog-lambda"></a>
+## Edit Configuration dialog box \(Lambda function\)<a name="edit-configuration-dialog-lambda"></a>
 
 The **Edit configuration** dialog box contains two tabs: **Configuration** and **SAM CLI**\.
 
@@ -109,7 +109,7 @@ The **SAM CLI** tab of the **Edit configuration** dialog box contains the follow
 + For WebStorm, see [Before Launch options](https://www.jetbrains.com/help/webstorm/run-debug-configuration-node-js.html#before-launch-options) on the WebStorm; Help website\.
 + For JetBrains Rider, see [Before Launch options](https://www.jetbrains.com/help/rider/Run_Debug_Configurations_dialog.html#before-launch-options) on the JetBrains Rider Help website\.
 
-## Edit Configuration Dialog Box \(Amazon ECS Cluster\)<a name="edit-configuration-dialog-ecs"></a>
+## Edit Configuration dialog box \(Amazon ECS cluster\)<a name="edit-configuration-dialog-ecs"></a>
 
 The **Edit configuration** dialog box contains two tabs: **Configuration** and **AWS Connection**\.
 

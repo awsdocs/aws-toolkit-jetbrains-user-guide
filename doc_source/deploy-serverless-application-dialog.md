@@ -1,4 +1,4 @@
-# Deploy Serverless Application Dialog Box<a name="deploy-serverless-application-dialog"></a>
+# Deploy Serverless Application dialog box<a name="deploy-serverless-application-dialog"></a>
 
 The **Deploy Serverless Application** dialog in the AWS Toolkit for JetBrains is displayed when you [deploy an AWS serverless application](key-tasks.md#key-tasks-sam-deploy)\.
 

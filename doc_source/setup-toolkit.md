@@ -12,7 +12,7 @@ We recommend that you create or use a special type of user and group in the acco
 **Note**  
 An access key contains both an *access key ID* value and a *secret access key* value\. The AWS Toolkit for JetBrains needs to use both of these values later\. Be sure to store them in a secure location\. If you lose them, they're gone forever and can't be retrieved\. However, you can always [delete a lost access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey), and then [create a replacement access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\. If you ever do this, you also need to [change your toolkit connection settings](key-tasks.md#key-tasks-change-connect)\. We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), [creating an access key for an AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_add-key) for the AWS Toolkit for JetBrains to use\.
 
-1. Ensure that [IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider](https://www.jetbrains.com/products.html) 2019\.2 or later is installed and running\.
+1. Ensure that a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) is installed and running\.
 
 1. Open **Settings** / **Preferences**\.
 
@@ -42,13 +42,13 @@ To use the AWS Toolkit for JetBrains to work with its available features for AWS
 
 1. After you install the AWS Toolkit for JetBrains \(and, if you're working with AWS serverless applications, Lambda functions, or Amazon ECS clusters, you've installed the preceding additional required tools, in order\), [connect to an AWS account for the first time](key-tasks.md#key-tasks-first-connect)\.
 
-## Installing AWS Toolkit for JetBrains Early Access Program \(EAP\) Builds<a name="eap-or-custom-install"></a>
+## Installing AWS Toolkit for JetBrains Early Access Program \(EAP\) builds<a name="eap-or-custom-install"></a>
 
 AWS occasionally releases AWS Toolkit for JetBrains preview and experimental plugins and features through Early Access Program \(EAP\) builds\.
 
 You can automatically get updated EAP builds as they become available, as follows\.
 
-1. Make sure IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider is running\.
+1. Make sure a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) is running\.
 
 1. Open **Settings** / **Preferences**\.
 

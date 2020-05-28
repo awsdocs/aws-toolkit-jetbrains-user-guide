@@ -2,7 +2,7 @@
 
 After you [install the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install), you can check for updates to the toolkit at any time and install any that are available\. 
 
-To do this, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do the following\.
+To do this, with a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) already running, do the following\.
 
 1. Open **Settings** / **Preferences**\.
 
@@ -11,4 +11,4 @@ To do this, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already ru
 
 1. Follow any on\-screen instructions to finish updating the AWS Toolkit for JetBrains\.
 
-1. Restart IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider\. 
+1. Restart the JetBrains IDE\.

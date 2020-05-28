@@ -1,4 +1,4 @@
-# Update Code Dialog Box<a name="update-code-dialog"></a>
+# Update Code dialog box<a name="update-code-dialog"></a>
 
 The **Update Code** dialog box in the AWS Toolkit for JetBrains is displayed whenever you [update an AWS Lambda function](key-tasks.md#key-tasks-sam-deploy)\.
 

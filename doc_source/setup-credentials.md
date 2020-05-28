@@ -1,18 +1,18 @@
-# Setting AWS Credentials for the AWS Toolkit for JetBrains<a name="setup-credentials"></a>
+# Setting AWS credentials for the AWS Toolkit for JetBrains<a name="setup-credentials"></a>
 
 To access an AWS account by using the AWS Toolkit for JetBrains, you must first connect the toolkit to that account\. You do this by specifying which AWS credentials for that account the toolkit will use to make that connection\.
 
 Complete the following procedures to make an initial connection, switch between connections, change connections, delete connections, and more\.
 
 **Topics**
-+ [Connecting for the First Time](#setup-credentials-first-connect)
-+ [Getting the Current Connection](#setup-credentials-current-connect)
-+ [Adding Multiple Connections](#setup-credentials-multiple-connect)
-+ [Switching between Connections](#setup-credentials-switch-connect)
-+ [Changing Connection Settings](#setup-credentials-change-connect)
-+ [Deleting a Connection](#setup-credentials-delete-connect)
++ [Connecting for the first time](#setup-credentials-first-connect)
++ [Getting the current connection](#setup-credentials-current-connect)
++ [Adding multiple connections](#setup-credentials-multiple-connect)
++ [Switching between connections](#setup-credentials-switch-connect)
++ [Changing connection settings](#setup-credentials-change-connect)
++ [Deleting a connection](#setup-credentials-delete-connect)
 
-## Connecting for the First Time<a name="setup-credentials-first-connect"></a>
+## Connecting for the first time<a name="setup-credentials-first-connect"></a>
 
 You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install)\. To complete this procedure, you must have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 
@@ -65,7 +65,7 @@ You can also have [more than one connection](key-tasks.md#key-tasks-multiple-con
 
 After you connect, the AWS Toolkit for JetBrains selects the default AWS Region automatically\. You might need to [switch to working with different AWS resources that are in a different Region](key-tasks.md#key-tasks-switch-region)\.
 
-## Getting the Current Connection<a name="setup-credentials-current-connect"></a>
+## Getting the current connection<a name="setup-credentials-current-connect"></a>
 
 To check which connection the AWS Toolkit for JetBrains is currently using, do one of the following:
 + On the status bar, see the current connection displayed in the **AWS Connection Settings** area\.  
@@ -75,7 +75,7 @@ To check which connection the AWS Toolkit for JetBrains is currently using, do o
 
 You can also have [more than one connection](key-tasks.md#key-tasks-multiple-connect) available, so that you can [switch between them](key-tasks.md#key-tasks-switch-connect)\.
 
-## Adding Multiple Connections<a name="setup-credentials-multiple-connect"></a>
+## Adding multiple connections<a name="setup-credentials-multiple-connect"></a>
 
 To complete this procedure, you must first have the additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\) or AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 
@@ -114,7 +114,7 @@ Now that you have multiple connections, you can [switch between them](key-tasks.
 
 After you connect, you might need to [switch to working with AWS resources in that account that are in a different AWS Region](key-tasks.md#key-tasks-switch-region)\.
 
-## Switching between Connections<a name="setup-credentials-switch-connect"></a>
+## Switching between connections<a name="setup-credentials-switch-connect"></a>
 
 1. [Add multiple connections](key-tasks.md#key-tasks-multiple-connect), if you haven't done so already\.
 
@@ -129,7 +129,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 
 After you connect, you might need to [switch to working with AWS resources in that account that are in a different AWS Region](key-tasks.md#key-tasks-switch-region)\.
 
-## Changing Connection Settings<a name="setup-credentials-change-connect"></a>
+## Changing connection settings<a name="setup-credentials-change-connect"></a>
 
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
@@ -139,7 +139,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 
 1. Make your changes to the file, and then save and close the file\. 
 
-## Deleting a Connection<a name="setup-credentials-delete-connect"></a>
+## Deleting a connection<a name="setup-credentials-delete-connect"></a>
 
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  

@@ -1,4 +1,4 @@
-# Key Tasks for the AWS Toolkit for JetBrains<a name="key-tasks"></a>
+# Key tasks for the AWS Toolkit for JetBrains<a name="key-tasks"></a>
 
 Use the following brief instructions to complete key tasks with the AWS Toolkit for JetBrains\.
 + [Install the AWS Toolkit for JetBrains](#key-tasks-install)
@@ -46,7 +46,7 @@ We recommend that you create or use a special type of user and group in the acco
 **Note**  
 An access key contains both an *access key ID* value and a *secret access key* value\. The AWS Toolkit for JetBrains needs to use both of these values later\. Be sure to store them in a secure location\. If you lose them, they're gone forever and can't be retrieved\. However, you can always [delete a lost access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey), and then [create a replacement access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\. If you ever do this, you also need to [change your toolkit connection settings](#key-tasks-change-connect)\. We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), [creating an access key for an AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_add-key) for the AWS Toolkit for JetBrains to use\.
 
-1. Ensure that [IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider](https://www.jetbrains.com/products.html) 2019\.2 or later is installed and running\.
+1. Ensure that a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) is installed and running\.
 
 1. Open **Settings** / **Preferences**\.
 
@@ -91,17 +91,21 @@ To do this, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already ru
 
 1. Follow any on\-screen instructions to finish updating the AWS Toolkit for JetBrains\.
 
-1. Restart IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider\. 
+1. Restart the JetBrains IDE\.
 
 ## Configure the AWS Toolkit for JetBrains to Use an HTTP Proxy<a name="key-tasks-proxy"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install), you can configure it to use an HTTP proxy\. 
 
 With IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do one of the following:
++ For CLion, see [Configure HTTP proxy](https://www.jetbrains.com/help/clion/configuring-http-proxy.html) on the CLion help website\.
++ For GoLand, see [HTTP Proxy](https://www.jetbrains.com/help/go/settings-http-proxy.html) on the GoLand help website\.
 + For IntelliJ IDEA, see [HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html) on the IntelliJ IDEA Help website\.
-+ For PyCharm, see [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm Help website\.
 + For WebStorm, see [HTTP Proxy](https://www.jetbrains.com/help/webstorm/settings-http-proxy.html) on the WebStorm Help website\.
-+ For JetBrains Rider, see [Configuring HTTP Proxy](https://www.jetbrains.com/help/rider/Configuring_HTTP_Proxy.html) on the JetBrains Rider Help website\.
++ For JetBrains Rider, see [Configure HTTP Proxy](https://www.jetbrains.com/help/rider/Configuring_HTTP_Proxy.html) on the JetBrains Rider help website\.
++ For PhpStorm;, see [HTTP Proxy](https://www.jetbrains.com/help/phpstorm/settings-http-proxy.html) on the PhpStorm help website\.
++ For PyCharm, see [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm Help website\.
++ For RubyMine, see [HTTP Proxy](https://www.jetbrains.com/help/ruby/settings-http-proxy.html) on the RubyMine help website\.
 
 After you complete the preceding instructions, the toolkit begins using those HTTP proxy settings\.
 
@@ -644,7 +648,7 @@ To make changes to this configuration later, on the menu bar, choose **Run**, **
 
 ## Working with Amazon EventBridge Schemas<a name="key-tasks-eventbridge"></a>
 
-See [Working with Amazon EventBridge Schemas](eventbridge-schemas.md)\.
+See [Working with Amazon EventBridge schemas](eventbridge-schemas.md)\.
 
 [Top](#key-tasks)
 

@@ -1,4 +1,4 @@
-# Changing \(Updating\) AWS Lambda Function Settings by Using the AWS Toolkit for JetBrains<a name="lambda-update"></a>
+# Changing \(updating\) AWS Lambda function settings by using the AWS Toolkit for JetBrains<a name="lambda-update"></a>
 
 To use the AWS Toolkit for JetBrains to change \(update\) the settings for an AWS Lambda function, do one of the following\.
 + With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.

@@ -1,14 +1,14 @@
-# New Project Dialog Box<a name="new-project-dialog"></a>
+# New Project dialog box<a name="new-project-dialog"></a>
 
 The **New Project** dialog box in the AWS Toolkit for JetBrains is displayed when you [create an AWS serverless application](key-tasks.md#key-tasks-sam-create)\.
 
 **Topics**
-+ [New Project Dialog Box \(IntelliJ IDEA\)](#new-project-dialog-intellij)
-+ [New Project Dialog Box \(PyCharm\)](#new-project-dialog-pycharm)
-+ [New Project Dialog Box \(WebStorm\)](#new-project-dialog-webstorm)
-+ [New Project Dialog Box \(JetBrains Rider\)](#new-project-dialog-rider)
++ [New Project dialog box \(IntelliJ IDEA\)](#new-project-dialog-intellij)
++ [New Project dialog box \(PyCharm\)](#new-project-dialog-pycharm)
++ [New Project dialog box \(WebStorm\)](#new-project-dialog-webstorm)
++ [New Project dialog box \(JetBrains Rider\)](#new-project-dialog-rider)
 
-## New Project Dialog Box \(IntelliJ IDEA\)<a name="new-project-dialog-intellij"></a>
+## New Project dialog box \(IntelliJ IDEA\)<a name="new-project-dialog-intellij"></a>
 
 ![\[The New Project dialog box for IntelliJ IDEA\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -41,7 +41,7 @@ The **New Project** dialog box contains the following items\.
 **Project format**  
 *Required*\. The format of the project that IntelliJ IDEA will create\. For more information, see [Project formats](https://www.jetbrains.com/help/idea/creating-and-managing-projects.html#project-formats) on the IntelliJ IDEA Help website\.
 
-## New Project Dialog Box \(PyCharm\)<a name="new-project-dialog-pycharm"></a>
+## New Project dialog box \(PyCharm\)<a name="new-project-dialog-pycharm"></a>
 
 ![\[The New Project dialog box for PyCharm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -56,7 +56,7 @@ The **New Project** dialog box contains the following items\.
 **New environment using / Existing interpreter**  
 Either **New environment using** or **Existing interpreter** is *required* \(but not both\)\. Provides information about the interpreter that PyCharm will use when creating the project\. For more information, see [Configure a Python interpreter](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#Configuring__language__Interpreter.xml) on the PyCharm Help website\.
 
-## New Project Dialog Box \(WebStorm\)<a name="new-project-dialog-webstorm"></a>
+## New Project dialog box \(WebStorm\)<a name="new-project-dialog-webstorm"></a>
 
 ![\[The New Project dialog box for WebStorm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -74,7 +74,7 @@ The **New Project** dialog box contains the following items\.
 **Node interpreter**  
 *Required*\. The location where the Node\.js interpreter is installed\.
 
-## New Project Dialog Box \(JetBrains Rider\)<a name="new-project-dialog-rider"></a>
+## New Project dialog box \(JetBrains Rider\)<a name="new-project-dialog-rider"></a>
 
 **Note**  
 When you create a new solution, this dialog box will contain the title **New Solution** instead of **New Project**\. However, the dialog box's contents are the same\.

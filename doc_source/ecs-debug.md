@@ -1,10 +1,10 @@
-# Debugging Code in an Amazon Elastic Container Service Cluster by Using the AWS Toolkit for JetBrains<a name="ecs-debug"></a>
+# Debugging code in an Amazon Elastic Container Service cluster by using the AWS Toolkit for JetBrains<a name="ecs-debug"></a>
 
 You can use the AWS Toolkit for JetBrains to debug code in an Amazon Elastic Container Service \(Amazon ECS\) cluster in an AWS account\.
 
 **Note**  
 Debugging code in Amazon ECS clusters is currently in beta\.  
-Ths feature is intended for use a development environment\. Do not use this in a production environment\. Debugging code in an Amazon ECS cluster changes the state of resources in your AWS account including, but not limited to, stopping associated Amazon ECS services and changing their configurations\. Also, manually changing the state of resources while code debugging is enabled could lead to unpredictable results\.
+This feature is intended for use a development environment\. Do not use this in a production environment\. Debugging code in an Amazon ECS cluster changes the state of resources in your AWS account including, but not limited to, stopping associated Amazon ECS services and changing their configurations\. Also, manually changing the state of resources while code debugging is enabled could lead to unpredictable results\.
 
 ## Prerequisites<a name="ecs-prereqs"></a>
 
@@ -31,7 +31,7 @@ For Node\.js, use `node` for the latest version of Node\.js, or one of the other
 
 1. On your local development machine, a copy of the code you want to debug\.
 
-## Debugging Code<a name="ecs-debug-debug"></a>
+## Debugging code<a name="ecs-debug-debug"></a>
 
 After you complete the preceding [prerequisites](#ecs-prereqs), you can debug your code as follows:
 
@@ -63,7 +63,7 @@ To make changes to this configuration later, on the menu bar, choose **Run**, **
 
 1. To disable debugging, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. Right\-click your service with the debug icon next to it, and then choose **Disable Cloud Debugging**\. A pop\-up is displayed, confirming that debugging is disabled\.
 
-## Setting Up the Amazon ECS Task Role<a name="ecs-task-role"></a>
+## Setting up the Amazon ECS task role<a name="ecs-task-role"></a>
 
 Note that the following information applies to permissions that Amazon ECS needs, which is different from [permissions that the AWS Toolkit for JetBrains needs](#ecs-iam-policy)\. 
 
@@ -79,7 +79,7 @@ To create a role that meets these requirements, see [Creating a Role for an AWS 
 
 To add additional AWS permissions to an existing Amazon ECS task role, see "To change the permissions allowed by a role \(console\)" in [Modifying a Role \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_modify.html#roles-managingrole-editing-console) in the IAM User Guide\.
 
-## Setting Up the Amazon ECS Cluster<a name="ecs-cluster"></a>
+## Setting up the Amazon ECS cluster<a name="ecs-cluster"></a>
 
 To debug code in Amazon Elastic Container Service \(Amazon ECS\) clusters, you must first have in your AWS account an Amazon ECS cluster that contains the service you want to debug\.
 
@@ -102,7 +102,7 @@ For advanced scenarios, you can create a cluster, task definition, and service i
 + [Creating a Task Definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-task-definition.html) – For **Select launch type compatibility**, choose the corresponding launch type\.
 + [Creating a Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-service.html) – For **Configure service**, choose the corresponding **Launch Type**\.
 
-## Adding the IAM Customer Managed Policy<a name="ecs-iam-policy"></a>
+## Adding the IAM customer managed policy<a name="ecs-iam-policy"></a>
 
 Note that the following information applies to permissions that the AWS Toolkit for JetBrains needs, which is different from [permissions that Amazon ECS needs](#ecs-task-role)\. 
 
