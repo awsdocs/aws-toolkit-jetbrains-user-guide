@@ -5,27 +5,30 @@
 | --- |
 |  To start using the AWS Toolkit for JetBrains right away, skip ahead to the [installation](key-tasks.md#key-tasks-install) and [first\-time connection](key-tasks.md#key-tasks-first-connect) instructions\.  | 
 
-The AWS Toolkit for JetBrains is an open source plugin for the integrated development environments \(IDEs\) from JetBrains\. The toolkit makes it easier for developers to develop, debug, and deploy serverless applications that use Amazon Web Services \(AWS\)\. <a name="supported-ides"></a>
-
-The AWS Toolkit for JetBrains includes the following:
-+  The [AWS Toolkit for CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)\.
-+  The [AWS Toolkit for GoLand](https://www.jetbrains.com/go/) \(for Go development\)\.
-+  The [AWS Toolkit for IntelliJ](https://aws.amazon.com/intellij/) \(for Java development\)\.
-+ The [AWS Toolkit for WebStorm](https://aws.amazon.com/webstorm/) \(for Node\.js development\)\. 
-+ The [AWS Toolkit for Rider](https://aws.amazon.com/rider/) \(for \.NET development\)\. 
-+ The [AWS Toolkit for PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)\.
-+ The [AWS Toolkit for PyCharm](https://aws.amazon.com/pycharm/) \(for Python development\)\.
-+  The [AWS Toolkit for RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)\.
-
-**Note**  
-When there are meaningful differences in functionality between the AWS Toolkits for the supported JetBrains IDEs, we note them in this User Guide\.
-
-You can also use the AWS Toolkit for JetBrains to work with AWS Lambda functions, AWS CloudFormation stacks, and Amazon ECS clusters\. The AWS Toolkit for JetBrains includes features such as AWS credentials management and AWS Region management, which simplify writing applications for AWS\.
+The AWS Toolkit for JetBrains is an open source plugin for the integrated development environments \(IDEs\) from JetBrains\. The toolkit makes it easier for developers to develop, debug, and deploy serverless applications that use Amazon Web Services \(AWS\)\. 
 
 **Topics**
++ [What the AWS Toolkit for JetBrains includes](#supported-ides-toolkits)
 + [How to get started](#welcome-)
 + [What you can do with the AWS Toolkit for JetBrains](#welcome-using)
 + [Related information](#welcome-related)
+
+## What the AWS Toolkit for JetBrains includes<a name="supported-ides-toolkits"></a><a name="supported-ides"></a>
+
+The AWS Toolkit for JetBrains includes the following specific toolkits:
++  [AWS Toolkit for CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)
++  [AWS Toolkit for GoLand](https://www.jetbrains.com/go/) \(for Go development\)
++  [AWS Toolkit for IntelliJ](https://aws.amazon.com/intellij/) \(for Java development\)
++ [AWS Toolkit for WebStorm](https://aws.amazon.com/webstorm/) \(for Node\.js development\)
++ [AWS Toolkit for Rider](https://aws.amazon.com/rider/) \(for \.NET development\)
++ [AWS Toolkit for PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)
++ [AWS Toolkit for PyCharm](https://aws.amazon.com/pycharm/) \(for Python development\)
++  [AWS Toolkit for RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)
+
+**Note**  
+When there are meaningful differences in functionality between the AWS Toolkits for the supported JetBrains IDEs, we note them in this guide\.
+
+You can also use the AWS Toolkit for JetBrains to work with AWS Lambda functions, AWS CloudFormation stacks, and Amazon Elastic Container Service \(Amazon ECS\) clusters\. The AWS Toolkit for JetBrains includes features such as AWS credentials management and AWS Region management, which simplify writing applications for AWS\.
 
 ## How to get started<a name="welcome-"></a>
 
@@ -37,13 +40,13 @@ For brief instructions about how to use other available AWS Toolkit features, se
 
 ## What you can do with the AWS Toolkit for JetBrains<a name="welcome-using"></a>
 
-You can use the AWS Toolkit for JetBrains to:
+You can use the AWS Toolkit for JetBrains to do the following:
 + [Create](key-tasks.md#key-tasks-sam-create), [deploy](key-tasks.md#key-tasks-sam-deploy), [change](key-tasks.md#key-tasks-sam-update), and [delete](key-tasks.md#key-tasks-sam-delete) [AWS serverless](https://aws.amazon.com/serverless/) applications in an AWS account\.
 + [Create](key-tasks.md#key-tasks-lambda-create), [run \(invoke\) and debug locally](key-tasks.md#key-tasks-lambda-local), [run \(invoke\) remotely](key-tasks.md#key-tasks-lambda-remote), [change](key-tasks.md#key-tasks-lambda-update), and [delete](key-tasks.md#key-tasks-lambda-delete) [AWS Lambda](https://aws.amazon.com/lambda/) functions in an AWS account\.
 + [View event logs](key-tasks.md#key-tasks-cloudformation-logs) for and [delete](key-tasks.md#key-tasks-cloudformation-delete) [AWS CloudFormation](https://aws.amazon.com/cloudformation/) stacks in an AWS account\.
 + Debug code in [Amazon ECS](key-tasks.md#key-tasks-ecs-debug) clusters in an AWS account\. \(Debugging code in Amazon ECS clusters is currently in beta\.\)
 + Work with [Amazon EventBridge](key-tasks.md#key-tasks-eventbridge) schemas in an AWS account\.
-+ [Switch to using different AWS credentials to connect with a different set of access permissions within the same AWS account or a different one](key-tasks.md#key-tasks-switch-connect)\.
++ [Switch AWS credentials to connect with a different set of access permissions within the same AWS account or another one](key-tasks.md#key-tasks-switch-connect)\.
 + [Switch to working with AWS resources in a different AWS Region for the connected AWS account](key-tasks.md#key-tasks-switch-region)\.
 + [Use an HTTP proxy](key-tasks.md#key-tasks-proxy) and [update it](key-tasks.md#key-tasks-update) as needed\.
 

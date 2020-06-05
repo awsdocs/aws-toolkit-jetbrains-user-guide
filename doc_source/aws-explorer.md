@@ -12,7 +12,7 @@ To open **AWS Explorer**, with the [AWS Toolkit for JetBrains already installed]
 
 ![\[AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-The **Show Options Menu** menu \(the gear icon\) in **AWS Explorer** contains the following commands\.
+The **Show Options Menu** menu \(the settings icon\) in **AWS Explorer** contains the following commands\.
 
 **AWS Connection Settings**  
 + **AWS Regions list** – The AWS Toolkit for JetBrains uses the selected AWS Region\. To switch the toolkit to use a different AWS Region, choose another listed Region\.

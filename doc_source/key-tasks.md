@@ -5,36 +5,23 @@ Use the following brief instructions to complete key tasks with the AWS Toolkit 
 + [Update the AWS Toolkit for JetBrains](#key-tasks-update)
 + [Configure the AWS Toolkit for JetBrains to use an HTTP proxy](#key-tasks-proxy)
 + [Work with connections from the AWS Toolkit for JetBrains to AWS accounts](#key-tasks-connections)
-  + [Connect to an AWS account for the first time](#key-tasks-first-connect)
-  + [Get the current connection](#key-tasks-current-connect)
-  + [Add multiple connections](#key-tasks-multiple-connect)
-  + [Switch between connections](#key-tasks-switch-connect)
-  + [Change connection settings](#key-tasks-change-connect)
-  + [Delete a connection](#key-tasks-delete-connect)
 + [Get the current AWS Region that the AWS Toolkit for JetBrains is using](#key-tasks-current-region)
-+ [Switch between Regions](#key-tasks-switch-region)
++ [Switch between AWS Regions](#key-tasks-switch-region)
 + [Open AWS Explorer within the AWS Toolkit for JetBrains](#key-tasks-open-explorer)
-+ [Work with AWS serverless applications in an account](#key-tasks-sam)
-  + [Create a serverless application](#key-tasks-sam-create)
-  + [Deploy a serverless application](#key-tasks-sam-deploy)
-  + [Change \(update\) the settings for a serverless application](#key-tasks-sam-update)
-  + [Delete a serverless application](#key-tasks-sam-delete)
-+ [Work with AWS Lambda functions in an account](#key-tasks-lambda)
-  + [Create a function](#key-tasks-lambda-create)
-  + [Run \(invoke\) or debug the local version of a function](#key-tasks-lambda-local)
-  + [Run \(invoke\) the remote version of a function](#key-tasks-lambda-remote)
-  + [Change \(update\) the configuration for a function](#key-tasks-lambda-update)
-  + [Delete a function](#key-tasks-lambda-delete)
-+ [Work with AWS CloudFormation stacks in an account](#key-tasks-cloudformation)
-  + [View event logs for a stack](#key-tasks-cloudformation-logs)
-  + [Delete a stack](#key-tasks-cloudformation-delete)
-+ [Work with Amazon ECS clusters in an account](#key-tasks-ecs)
-  + [Debug code in a cluster](#key-tasks-ecs-debug)
-+ [Work with Amazon EventBridge schemas in an account](#key-tasks-eventbridge)
-+ [Work with Amazon S3 buckets and objects in an account](#key-tasks-s3)
-+ [Work with Amazon CloudWatch Logs in an account](#key-tasks-cloudwatch)
++ Work with AWS services
+  + [Work with AWS serverless applications](#key-tasks-sam)
+  + [Work with AWS Lambda functions](#key-tasks-lambda)
+  + [Work with AWS CloudFormation stacks](#key-tasks-cloudformation)
+  + [Work with Amazon CloudWatch Logs](#key-tasks-cloudwatch)
+  + [Work with Amazon ECS clusters in an account](#key-tasks-ecs)
+  + [Work with Amazon EventBridge schemas](#key-tasks-eventbridge)
+  + [Work with Amazon S3 buckets and objects](#key-tasks-s3)
 
 ## Install the AWS Toolkit for JetBrains<a name="key-tasks-install"></a>
+
+### <a name="account-and-ide-setup"></a>
+
+#### Setting up your AWS account to use AWS Toolkit for JetBrains<a name="aws-account-and-access"></a>
 
 1. [Create an AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/), if you don't have an account already\.
 
@@ -45,6 +32,8 @@ We recommend that you create or use a special type of user and group in the acco
 1. [Create an access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) for the user, if you don't have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for that user already\. 
 **Note**  
 An access key contains both an *access key ID* value and a *secret access key* value\. The AWS Toolkit for JetBrains needs to use both of these values later\. Be sure to store them in a secure location\. If you lose them, they're gone forever and can't be retrieved\. However, you can always [delete a lost access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey), and then [create a replacement access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\. If you ever do this, you also need to [change your toolkit connection settings](#key-tasks-change-connect)\. We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), [creating an access key for an AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_add-key) for the AWS Toolkit for JetBrains to use\.
+
+#### Installing and configuring AWS Toolkit for JetBrains<a name="install-jetbrains-toolkit"></a>
 
 1. Ensure that a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) is installed and running\.
 
@@ -98,20 +87,20 @@ To do this, with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already ru
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install), you can configure it to use an HTTP proxy\. 
 
 With IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do one of the following:
-+ For CLion, see [Configure HTTP proxy](https://www.jetbrains.com/help/clion/configuring-http-proxy.html) on the CLion help website\.
-+ For GoLand, see [HTTP Proxy](https://www.jetbrains.com/help/go/settings-http-proxy.html) on the GoLand help website\.
-+ For IntelliJ IDEA, see [HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html) on the IntelliJ IDEA Help website\.
-+ For WebStorm, see [HTTP Proxy](https://www.jetbrains.com/help/webstorm/settings-http-proxy.html) on the WebStorm Help website\.
-+ For JetBrains Rider, see [Configure HTTP Proxy](https://www.jetbrains.com/help/rider/Configuring_HTTP_Proxy.html) on the JetBrains Rider help website\.
-+ For PhpStorm;, see [HTTP Proxy](https://www.jetbrains.com/help/phpstorm/settings-http-proxy.html) on the PhpStorm help website\.
-+ For PyCharm, see [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm Help website\.
-+ For RubyMine, see [HTTP Proxy](https://www.jetbrains.com/help/ruby/settings-http-proxy.html) on the RubyMine help website\.
++ **CLion** – See [Configure HTTP proxy](https://www.jetbrains.com/help/clion/configuring-http-proxy.html) on the CLion help website\.
++ **GoLand** – See [HTTP Proxy](https://www.jetbrains.com/help/go/settings-http-proxy.html) on the GoLand help website\.
++ **IntelliJ IDEA** – See [HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html) on the IntelliJ IDEA Help website\.
++ **WebStorm** – See [HTTP Proxy](https://www.jetbrains.com/help/webstorm/settings-http-proxy.html) on the WebStorm Help website\.
++ **JetBrains Rider** – See [Configure HTTP Proxy](https://www.jetbrains.com/help/rider/Configuring_HTTP_Proxy.html) on the JetBrains Rider help website\.
++ **PhpStorm** – See [HTTP Proxy](https://www.jetbrains.com/help/phpstorm/settings-http-proxy.html) on the PhpStorm help website\.
++ **PyCharm** – See [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm Help website\.
++ **RubyMine** – See [HTTP Proxy](https://www.jetbrains.com/help/ruby/settings-http-proxy.html) on the RubyMine help website\.
 
 After you complete the preceding instructions, the toolkit begins using those HTTP proxy settings\.
 
 [Top](#key-tasks)
 
-## Connect the AWS Toolkit for JetBrains to AWS Accounts<a name="key-tasks-connections"></a>
+## Work with connections from the AWS Toolkit for JetBrains to AWS accounts<a name="key-tasks-connections"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install), use the toolkit to do the following with AWS accounts:
 + [Connect to an AWS account for the first time](#key-tasks-first-connect)
@@ -123,7 +112,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install), use the t
 
 [Top](#key-tasks)
 
-### Connect to an AWS Account for the First Time<a name="key-tasks-first-connect"></a>
+### Connect to an AWS Account for the first time<a name="key-tasks-first-connect"></a>
 
 We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\. To complete this procedure, you need an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or for an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 
@@ -178,7 +167,7 @@ After you connect, the AWS Toolkit for JetBrains selects the default AWS Region 
 
 [Top](#key-tasks)
 
-### Add Multiple Connections<a name="key-tasks-multiple-connect"></a>
+### Add multiple connections<a name="key-tasks-multiple-connect"></a>
 
 To complete this procedure, you must first have the additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(recommended\) or AWS account root user \(strongly discouraged\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 
@@ -219,7 +208,7 @@ After you connect, you might need to [switch connections to work with](#key-task
 
 [Top](#key-tasks)
 
-### Switch between Connections<a name="key-tasks-switch-connect"></a>
+### Switch between connections<a name="key-tasks-switch-connect"></a>
 
 1. [Add multiple connections](#key-tasks-multiple-connect), if you haven't done so already\.
 
@@ -236,7 +225,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 
 [Top](#key-tasks)
 
-### Change Connection Settings<a name="key-tasks-change-connect"></a>
+### Change connection settings<a name="key-tasks-change-connect"></a>
 
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
@@ -248,7 +237,7 @@ After you connect, you might need to [switch to working with AWS resources in th
 
 [Top](#key-tasks)
 
-### Delete a Connection<a name="key-tasks-delete-connect"></a>
+### Delete a connection<a name="key-tasks-delete-connect"></a>
 
 1. Do one of the following:
    + On the status bar, choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
@@ -264,7 +253,7 @@ After you delete a connection, you might need to [switch to a different connecti
 
 [Top](#key-tasks)
 
-## Get the Current Connection<a name="key-tasks-current-connect"></a>
+## Get the current connection<a name="key-tasks-current-connect"></a>
 
 To check which connection the AWS Toolkit for JetBrains is currently using, do one of the following:
 + On the status bar, see the current connection displayed in the **AWS Connection Settings** area\.  
@@ -276,7 +265,7 @@ You can also have [more than one connection](#key-tasks-multiple-connect) availa
 
 [Top](#key-tasks)
 
-## Get the Current AWS Region That Is In Use<a name="key-tasks-current-region"></a>
+## Get the current AWS Region<a name="key-tasks-current-region"></a>
 
 To check which AWS Region the AWS Toolkit for JetBrains is currently using, do one of the following:
 + On the status bar, see the current Region displayed in the **AWS Connection Settings** area\.  
@@ -322,7 +311,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 
 [Top](#key-tasks)
 
-### Create a Serverless Application<a name="key-tasks-sam-create"></a>
+### Create a serverless application<a name="key-tasks-sam-create"></a>
 
 To complete this procedure, you must first [install the AWS Toolkit for JetBrains](#key-tasks-install), and if you haven't yet, [connect to an AWS account for the first time](#key-tasks-first-connect)\. 
 
@@ -359,7 +348,7 @@ You can also [deploy the serverless application](#key-tasks-sam-deploy)\. After 
 
 [Top](#key-tasks)
 
-### Deploy a Serverless Application<a name="key-tasks-sam-deploy"></a>
+### Deploy a serverless application<a name="key-tasks-sam-deploy"></a>
 
 Before you can use this procedure to deploy an AWS serverless application, you must first [create the AWS serverless application](#key-tasks-sam-create)\. Then follow these steps\.
 **Note**  
@@ -378,7 +367,7 @@ After you deploy it, you can [run \(invoke\) the remote version of an AWS Lambda
 
 [Top](#key-tasks)
 
-### Change \(Update\) the Settings for a Serverless Application<a name="key-tasks-sam-update"></a>
+### Change \(update\) the settings for a serverless application<a name="key-tasks-sam-update"></a>
 
 Before you can use this procedure to change settings for a serverless application, you must first [deploy the AWS serverless application](#key-tasks-sam-deploy) that you want to change\. Then follow these steps\.
 **Note**  
@@ -397,7 +386,7 @@ To deploy a serverless application that contains an AWS Lambda function, and dep
 
 [Top](#key-tasks)
 
-### Delete a Serverless Application<a name="key-tasks-sam-delete"></a>
+### Delete a serverless application<a name="key-tasks-sam-delete"></a>
 
 Before you can use this procedure to delete a serverless application, you must first [deploy the AWS serverless application](#key-tasks-sam-deploy) that you want to delete\. Then follow these steps\.
 
@@ -423,17 +412,17 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 
 [Top](#key-tasks)
 
-### Create a Function<a name="key-tasks-lambda-create"></a>
+### Create a function<a name="key-tasks-lambda-create"></a>
 
 You can use the AWS Toolkit for JetBrains to create a Lambda function that is [part of an AWS serverless application](#key-tasks-lambda-create-app), or you can create a Lambda function [by itself](#key-tasks-lambda-create-standalone)\.
 
-#### Create a Serverless Application that Contains a Lambda Function<a name="key-tasks-lambda-create-app"></a>
+#### Create a serverless application that contains a Lambda Function<a name="key-tasks-lambda-create-app"></a>
 
 See the instructions earlier in this topic about [creating an AWS serverless application](#key-tasks-sam-create)\.
 
 [Top](#key-tasks)
 
-#### Create a Standalone Function<a name="key-tasks-lambda-create-standalone"></a>
+#### Create a standalone function<a name="key-tasks-lambda-create-standalone"></a>
 
 To complete this procedure, you must first [install the ](#key-tasks-install)AWS Toolkit for JetBrains and, if you haven't yet, [connect to an AWS account for the first time](#key-tasks-first-connect)\. 
 
@@ -461,7 +450,7 @@ After you create the function, you can [run \(invoke\) or debug the local versio
 
 [Top](#key-tasks)
 
-### Run \(Invoke\) or Debug the Local Version of a Function<a name="key-tasks-lambda-local"></a>
+### Run \(invoke\) or debug the local version of a function<a name="key-tasks-lambda-local"></a>
 
 A *local* version of an AWS Lambda function is a function whose source code already exists on your local development computer\.
 
@@ -481,7 +470,7 @@ To run \(invoke\) or debug the local version of a Lambda function, and run \(inv
 
 [Top](#key-tasks)
 
-### Run \(Invoke\) the Remote Version of a Function<a name="key-tasks-lambda-remote"></a>
+### Run \(invoke\) the remote version of a function<a name="key-tasks-lambda-remote"></a>
 
 A *remote* version of an AWS Lambda function is a function whose source code already exists inside of the Lambda service for an AWS account\.
 
@@ -491,13 +480,13 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 
 1. Expand **Lambda**, and confirm that the name of the function is listed\. If it is, skip ahead to step 3 in this procedure\.
 
-   If the name of the function isn't listed, [create the Lambda function](#key-tasks-lambda-create) that you want to run \(invoke\), if you have not done so already\. 
+   If the name of the function isn't listed, [create the Lambda function](#key-tasks-lambda-create) that you want to run \(invoke\)\. 
 
    If you created the function as [part of an AWS serverless application](#key-tasks-lambda-create-app), you must also [deploy that application](#key-tasks-sam-deploy)\.
 
    If you created the function by creating a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), then in the code file, choose the Lambda icon next to the function handler\. Then choose **Create new AWS Lambda**\. Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.
 
-1. With **Lambda** already expanded in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
+1. With **Lambda** open in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
 ![\[Running the remote version of a Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
@@ -506,7 +495,7 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 
 [Top](#key-tasks)
 
-### Change \(Update\) the Configuration for a Function<a name="key-tasks-lambda-update"></a>
+### Change \(update\) the configuration for a function<a name="key-tasks-lambda-update"></a>
 
 Do one of the following:
 + With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.
@@ -529,17 +518,17 @@ Do one of the following:
 
 [Top](#key-tasks)
 
-### Delete a Function<a name="key-tasks-lambda-delete"></a>
+### Delete a function<a name="key-tasks-lambda-delete"></a>
 
 You can use the AWS Toolkit for JetBrains to delete an AWS Lambda function that is [part of an AWS serverless application](#key-tasks-lambda-delete-sam)\. Or you can delete a [standalone Lambda function](#key-tasks-lambda-delete-standalone)\.
 
-#### Delete a Serverless Application that Contains a Function<a name="key-tasks-lambda-delete-sam"></a>
+#### Delete a serverless application that contains a function<a name="key-tasks-lambda-delete-sam"></a>
 
 See the instructions for [deleting a serverless application](#key-tasks-sam-delete), earlier in this topic\.
 
 [Top](#key-tasks)
 
-#### Delete a Standalone Function<a name="key-tasks-lambda-delete-standalone"></a>
+#### Delete a standalone function<a name="key-tasks-lambda-delete-standalone"></a>
 
 1. [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](#key-tasks-switch-region) that contains the function, do that now\.
 
@@ -552,7 +541,7 @@ See the instructions for [deleting a serverless application](#key-tasks-sam-dele
 
 [Top](#key-tasks)
 
-## Work with AWS CloudFormation Stacks<a name="key-tasks-cloudformation"></a>
+## Work with AWS CloudFormation stacks<a name="key-tasks-cloudformation"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with AWS CloudFormation stacks in the account, as follows:
 + [View event logs for a stack](#key-tasks-cloudformation-logs)
@@ -562,19 +551,19 @@ Currently, you can't use the AWS Toolkit for JetBrains to directly [create stack
 
 [Top](#key-tasks)
 
-### Create a Stack<a name="key-tasks-cloudformation-create"></a>
+### Create a stack<a name="key-tasks-cloudformation-create"></a>
 
 Currently, you can't use the AWS Toolkit for JetBrains to create an AWS CloudFormation stack directly\. However, whenever you use the toolkit to [deploy an AWS serverless application](#key-tasks-sam-deploy) or to [create and then deploy an AWS Lambda function](#key-tasks-lambda-create-standalone), the toolkit deploys these by first creating a corresponding stack in AWS CloudFormation, and then using that stack for the deployment\.
 
 [Top](#key-tasks)
 
-### Change Stack Settings<a name="key-tasks-cloudformation-change"></a>
+### Change stack settings<a name="key-tasks-cloudformation-change"></a>
 
 Currently, you can't use the AWS Toolkit for JetBrains to change the settings for an AWS CloudFormation stack directly\. However, you can [change \(update\) the settings for an AWS serverless application](#key-tasks-sam-update) that belongs to a stack, or [change \(update\) the configuration for an AWS Lambda function](#key-tasks-lambda-update) that belongs to a stack\. Then you [deploy that serverless application](#key-tasks-sam-deploy) again or deploy that function, as part of the lifecycle of [running \(invoking\) the remote version of that function](#key-tasks-lambda-remote), again\. 
 
 [Top](#key-tasks)
 
-### View Event Logs for a Stack<a name="key-tasks-cloudformation-logs"></a>
+### View event logs for a stack<a name="key-tasks-cloudformation-logs"></a>
 
 1. [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If the stack is in an AWS Region that's different from the current one, [switch to a different AWS Region](#key-tasks-switch-region) that contains it\.
 
@@ -587,7 +576,7 @@ Currently, you can't use the AWS Toolkit for JetBrains to change the settings fo
 
 [Top](#key-tasks)
 
-### Deleting a Stack<a name="key-tasks-cloudformation-delete"></a>
+### Deleting a stack<a name="key-tasks-cloudformation-delete"></a>
 
 1. [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](#key-tasks-switch-region) that contains the stack, do that now\.
 
@@ -608,11 +597,11 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 
 [Top](#key-tasks)
 
-## Work with Amazon ECS Clusters<a name="key-tasks-ecs"></a>
+## Work with Amazon ECS clusters<a name="key-tasks-ecs"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon ECS clusters in the account, as follows\. 
 
-### Debug Code in a Cluster<a name="key-tasks-ecs-debug"></a>
+### Debug code in a cluster<a name="key-tasks-ecs-debug"></a>
 
 After you complete the [prerequisites](ecs-debug.md#ecs-prereqs), do the following\.
 
@@ -646,16 +635,16 @@ To make changes to this configuration later, on the menu bar, choose **Run**, **
 
 [Top](#key-tasks)
 
-## Working with Amazon EventBridge Schemas<a name="key-tasks-eventbridge"></a>
+## Working with Amazon EventBridge schemas<a name="key-tasks-eventbridge"></a>
 
 See [Working with Amazon EventBridge schemas](eventbridge-schemas.md)\.
 
 [Top](#key-tasks)
 
-## Work with Amazon S3 Buckets and Objects<a name="key-tasks-s3"></a>
+## Work with Amazon S3 buckets and objects<a name="key-tasks-s3"></a>
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon S3 buckets and objects in the account, as follows\.
-+ [Work with Amazon S3 Buckets](work-with-S3-buckets.md)
-+ [Work with Amazon S3 Objects](work-with-S3-objects.md)
++ [Work with Amazon S3 buckets](work-with-S3-buckets.md)
++ [Work with Amazon S3 objects](work-with-S3-objects.md)
 
 [Top](#key-tasks)

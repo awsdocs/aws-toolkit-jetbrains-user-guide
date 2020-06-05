@@ -1,6 +1,6 @@
 # Updating the AWS Toolkit for JetBrains<a name="update-toolkit"></a>
 
-After you [install the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install), you can check for updates to the toolkit at any time and install any that are available\. 
+After you [install the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install), you can check for updates to the toolkit at any time and install them\. 
 
 To do this, with a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) already running, do the following\.
 

@@ -1,6 +1,10 @@
 # Installing the AWS Toolkit for JetBrains<a name="setup-toolkit"></a>
 
-Install the AWS Toolkit for JetBrains as follows\.
+Installing the AWS Toolkit for JetBrains is a two\-stage process\. First, you configure your AWS account and permissions so you can interact with AWS services within the JetBrains IDE\. Next, you install and configure the Toolkit as an IDE plugin\.
+
+## <a name="account-and-ide-setup"></a>
+
+### Setting up your AWS account to use AWS Toolkit for JetBrains<a name="aws-account-and-access"></a>
 
 1. [Create an AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/), if you don't have an account already\.
 
@@ -11,6 +15,8 @@ We recommend that you create or use a special type of user and group in the acco
 1. [Create an access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) for the user, if you don't have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for that user already\. 
 **Note**  
 An access key contains both an *access key ID* value and a *secret access key* value\. The AWS Toolkit for JetBrains needs to use both of these values later\. Be sure to store them in a secure location\. If you lose them, they're gone forever and can't be retrieved\. However, you can always [delete a lost access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey), and then [create a replacement access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\. If you ever do this, you also need to [change your toolkit connection settings](key-tasks.md#key-tasks-change-connect)\. We support, but [strongly discourage](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users), [creating an access key for an AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#id_root-user_manage_add-key) for the AWS Toolkit for JetBrains to use\.
+
+### Installing and configuring AWS Toolkit for JetBrains<a name="install-jetbrains-toolkit"></a>
 
 1. Ensure that a [JetBrains IDE supported by AWS Toolkits](welcome.md#supported-ides) is installed and running\.
 
@@ -54,16 +60,15 @@ You can automatically get updated EAP builds as they become available, as follow
 
 1. Choose **Plugins**\.
 
-1. Choose **Manage Repositories, Configure Proxy or Install Plugin from Disk** \(the gear icon\)\.
+1. Choose **Manage Repositories, Configure Proxy or Install Plugin from Disk** \(the settings icon\)\.
 
 1. Choose **Manage Plugin Repositories**\.
 
 1. Choose **Add** \(the **\+** icon\)\.
 
-1. Enter the following URL to the EAP repository for the AWS Toolkit for JetBrains: `https://plugins.jetbrains.com/plugins/eap/aws.toolkit`\. Then press Enter, and choose **OK**\.
+1. Enter the following URL to the EAP repository for the AWS Toolkit for JetBrains: `https://plugins.jetbrains.com/plugins/eap/aws.toolkit`\. Then press **Enter**, and choose **OK**\.
 
 1. If prompted, choose **Restart IDE**\. Then when prompted, choose **Restart**\.
+   + Now, whenever a later EAP build is available, choose **Update** next to the** AWS Toolkit** entry in **Plugins**\. When prompted, choose **Restart IDE**\. Then choose **Restart**\.
 
-1. Now, whenever a later EAP build is available, choose **Update** next to the** AWS Toolkit** entry in **Plugins**\. When prompted, choose **Restart IDE**\. Then choose **Restart**\.
-
-1. To remove a reference to the custom repository, in the **Preferences** dialog, choose **Plugins**\. Then choose **Manage Repositories, Configure Proxy or Install Plugin from Disk** \(the gear icon\), **Manage Plugin Repositories**\. Select the URL to the custom repository, and then choose **Remove** \(the **\-** icon\)\. Then choose **OK**\.
+1. To remove a reference to the custom repository, in the **Preferences** dialog box, choose **Plugins**\. Then choose **Manage Repositories, Configure Proxy or Install Plugin from Disk** \(the settings icon\), **Manage Plugin Repositories**\. Select the URL to the custom repository, and then choose **Remove** \(the **\-** icon\)\. Then choose **OK**\.

@@ -14,7 +14,7 @@ Complete the following procedures to make an initial connection, switch between 
 
 ## Connecting for the first time<a name="setup-credentials-first-connect"></a>
 
-You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install)\. To complete this procedure, you must have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
+You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install)\. To complete this procedure, you must have an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 
 1. With your access key ID value and secret access key value ready, do one of the following:
    + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
