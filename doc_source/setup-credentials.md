@@ -92,7 +92,7 @@ To complete this procedure, you must first have the additional [access key](http
    For example, for a named profile named `myuser`, use the following format\.
 
    ```
-   [profile myuser]
+   [myuser]
    aws_access_key_id = AKIAIOSFODNN7EXAMPLE
    aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
    ```
