@@ -16,6 +16,8 @@ Use the following brief instructions to complete key tasks with the AWS Toolkit 
   + [Work with Amazon ECS clusters in an account](#key-tasks-ecs)
   + [Work with Amazon EventBridge schemas](#key-tasks-eventbridge)
   + [Work with Amazon S3 buckets and objects](#key-tasks-s3)
+  + [Work with Amazon RDS databases](#key-tasks-rds)
+  + [Work with Amazon Redshift clusters and databases](#key-tasks-rs)
 
 ## Install the AWS Toolkit for JetBrains<a name="key-tasks-install"></a>
 
@@ -89,11 +91,11 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install), you can c
 With IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, do one of the following:
 + **CLion** – See [Configure HTTP proxy](https://www.jetbrains.com/help/clion/configuring-http-proxy.html) on the CLion help website\.
 + **GoLand** – See [HTTP Proxy](https://www.jetbrains.com/help/go/settings-http-proxy.html) on the GoLand help website\.
-+ **IntelliJ IDEA** – See [HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html) on the IntelliJ IDEA Help website\.
-+ **WebStorm** – See [HTTP Proxy](https://www.jetbrains.com/help/webstorm/settings-http-proxy.html) on the WebStorm Help website\.
++ **IntelliJ IDEA** – See [HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html) on the IntelliJ IDEA help website\.
++ **WebStorm** – See [HTTP Proxy](https://www.jetbrains.com/help/webstorm/settings-http-proxy.html) on the WebStorm help website\.
 + **JetBrains Rider** – See [Configure HTTP Proxy](https://www.jetbrains.com/help/rider/Configuring_HTTP_Proxy.html) on the JetBrains Rider help website\.
 + **PhpStorm** – See [HTTP Proxy](https://www.jetbrains.com/help/phpstorm/settings-http-proxy.html) on the PhpStorm help website\.
-+ **PyCharm** – See [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm Help website\.
++ **PyCharm** – See [HTTP Proxy](https://www.jetbrains.com/help/pycharm/settings-http-proxy.html) on the PyCharm help website\.
 + **RubyMine** – See [HTTP Proxy](https://www.jetbrains.com/help/ruby/settings-http-proxy.html) on the RubyMine help website\.
 
 After you complete the preceding instructions, the toolkit begins using those HTTP proxy settings\.
@@ -114,15 +116,25 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install), use the t
 
 ### Connect to an AWS Account for the first time<a name="key-tasks-first-connect"></a>
 
-We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\. To complete this procedure, you need an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or for an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
-
-1. With your access key ID value and secret access key value ready, do one of the following:
-   + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
+We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\.Depending on your connection option, you must have completed the following prerequisites:
++ AWS security credentials – Created an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
++ AWS SSO – Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information on this process, see the [Getting started](AWS Single Sign-On User Guidegetting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
+**Note**  
+We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
+You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
++ To open the credentials for editing, do one of the following:
+  + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[AWS no credentials selected on the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-   + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
+  + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. Choose **Configure AWS Connection**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[Configure AWS connection from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
 ![\[Edit AWS credentials from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+After you open the credentials file, you can edit it to specify access to your AWS account using access keys or AWS SSO\.
+
+------
+#### [  Connect with access keys  ]
 
 1. In the file, under `[default]`, for `aws_access_key_id`, replace `[accessKey1]` with your access key ID value \(for example, `AKIAIOSFODNN7EXAMPLE`\)\.
 
@@ -152,14 +164,64 @@ The AWS Toolkit for JetBrains currently supports the following configuration var
 `aws_secret_access_key`
 `aws_session_token`
 `credential_process`
+`external_id`
 `mfa_serial`
 `role_arn`
 `source_profile`
-For more information, see [AWS CLI Configuration Variables](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html) in the *AWS CLI Command Reference*\.
+For more information, see [AWS CLI configuration variables](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html) in the *AWS CLI Command Reference*\.
 
 1. Save and then close the file\. The AWS Toolkit for JetBrains tries to connect to the account by using the preceding access key\. 
 
    After connecting, you can use the toolkit to work with AWS resources in that account, such as [AWS serverless](#key-tasks-sam) applications, [AWS Lambda](#key-tasks-lambda) functions, and [AWS CloudFormation](#key-tasks-cloudformation) stacks\.
+
+------
+#### [  Connect with AWS SSO  ]
+
+With AWS SSO, you define a named profile in the `credentials` file or `config` that you use to retrieve temporary credentials for your AWS account\. The profile definition specifies the SSO user portal as well as the AWS account and IAM role associated with the user requesting access\.
+
+AWS Toolkit for JetBrains calls the AWS CLI `login` command on your behalf\. \(The named profile that you added is passed as an option to `login`\)\. If the login is successful, your default browser is launched and verifies your AWS SSO login\. You can then start accessing the AWS resources available in your account\.
+
+1. In the `credentials`/`config` file, under `[default]`, add a template for a named profile\. 
+
+   You can use an example like the one that follows as a template for a typical AWS SSO profile\.
+**Important**  
+For named profiles, the `credentials` file uses a different naming format than the `config` file\. Include the prefix word `profile` only when configuring a named profile in the `config` file\. Do **not** use the word `profile` when creating an entry in the `credentials` file\.
+
+   ```
+   ... Named profile in credentials file ...
+   
+   [default]
+   sso_start_url = https://my-sso-portal.awsapps.com/start
+   sso_region = us-east-1
+   sso_account_id = 123456789011
+   sso_role_name = readOnly
+   region = us-west-2
+   
+   ... Named profile in config file ...
+   
+   [profile user1]
+   sso_start_url = https://my-sso-portal.awsapps.com/start
+   sso_region = us-east-1
+   sso_account_id = 123456789011
+   sso_role_name = readOnly
+   region = us-west-2
+   
+   ... Other file contents omitted for brevity ...
+   ```
+
+1. Assign values to the keys that are specific to your SSO configuration:
+   + `sso_start_url` – Specifies the URL that points to the organization's AWS SSO user portal\.
+   + `sso_region` – Specifies the AWS Region that contains the AWS SSO portal host\. This is separate from and can be a different AWS Region than that specified by the default `region` parameter\.
+   + `sso_account_id` – Specifies the AWS account ID that contains the IAM role with the permission that you want to grant to the associated AWS SSO user\.
+   + `sso_role_name` – Specifies the friendly name of the IAM role that defines the user's permissions when using this profile to get credentials through AWS SSO\.
+   + `region` IAM Specifies the AWS Region that contains the AWS SSO portal host\. This is separate from and can be a different AWS Region than that specified by the default `region` parameter\. 
+**Note**  
+You can also include any other keys and values that are valid in the `.aws/credentials file`, such as `output` or `S3`\. However, you can't include any credential\-related values, such as `role_arn` or `aws_secret_access_key`\. If you do, the AWS CLI produces an error\.  
+For more information, see [Configuring the AWS CLI to use AWS Single Sign\-On](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile) in the *AWS Command Line Interface User Guide*\.
+
+   After AWS Toolkit for JetBrains calls the AWS SSO `login` command on your behalf, a browser window launches to confirm the SSO login was successful\.
+
+------
 
 You can also have [more than one connection](#key-tasks-multiple-connect) available, so that you can [switch between them](#key-tasks-switch-connect)\.
 
@@ -169,11 +231,17 @@ After you connect, the AWS Toolkit for JetBrains selects the default AWS Region 
 
 ### Add multiple connections<a name="key-tasks-multiple-connect"></a>
 
-To complete this procedure, you must first have the additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(recommended\) or AWS account root user \(strongly discouraged\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
+Depending on the additional connection you want to add, you must first have completed one of the following tasks:
++ Created an additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\) or AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
++ Enabled [AWS SSO access](AWS Single Sign-On User Guidegetting-started.html) for the additional user's AWS account\.
+**Note**  
+We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
+You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 
 1. [Connect for the first time](#key-tasks-first-connect), if you have not done so already\.
 
-1. With the additional access key ID value and secret access key value ready, do one of the following:
+1. To start editing the credentials file, do one of the following:
    + On the status bar, choose **AWS Connection Settings**, and then choose **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing to edit AWS credentials from the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
    + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the settings icon\)\. Choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
@@ -181,13 +249,17 @@ To complete this procedure, you must first have the additional [access key](http
 
 1. In the file, add a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) for each additional connection\. Profile names can contain only the uppercase letters  **A** through **Z**, the lowercase letters **a** through **z**, the numbers **0** through **9**, the hyphen character \( **\-**\), and the underscore character \( **\_**\)\. Profile names must be less than 64 characters in length\. 
 
+------
+#### [  Profile with access keys  ]
+
    For example, for a named profile named `myuser`, use the following format\.
 
    ```
-   [profile myuser]
+   [myuser]
    aws_access_key_id = AKIAIOSFODNN7EXAMPLE
    aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
    ```
+
 **Note**  
 The AWS Toolkit for JetBrains currently supports named profiles with only the following characters: **A**\-**Z**, **a**\-**z**, **0**\-**9**, underscore \(**\_**\), and hyphen \(**\-**\)\.  
 Currently, the toolkit supports only the following configuration variables:  
@@ -198,7 +270,30 @@ Currently, the toolkit supports only the following configuration variables:
 `mfa_serial`
 `role_arn`
 `source_profile`
-For more information, see [AWS CLI Configuration Variables](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html) in the *AWS CLI Command Reference*\.
+For more information, see [AWS CLI configuration variables](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html) in the *AWS CLI Command Reference*\.
+
+------
+#### [  Profile with AWS SSO ]
+
+   With AWS SSO, you can enable multiple connections by adding named profiles that define how specific accounts are authenticated using single sign\-on\. Ensure each named profile that you add to the `credentials` file has a unique name and assign account\-specific values to the SSO keys\. This is shown in the following example\.
+
+   ```
+   ... Other file contents omitted for brevity ...
+   
+   [profile user2]
+   sso_start_url = https://my-sso-portal.awsapps.com/start
+   sso_region = us-east-1
+   sso_account_id = 123456789011
+   sso_role_name = readOnly
+   region = us-west-2
+   
+   
+   ... Other file contents omitted for brevity ...
+   ```
+
+   For more information about the AWS SSO key\-value pairs, see [defining named profiles for SSO](setup-credentials.md#SSO-profile)\.
+
+------
 
 1. Save and then close the file\. The AWS Toolkit for JetBrains displays the new connection in the **AWS Connection Settings** menu in both the status bar and in **AWS Explorer**\.
 
@@ -245,7 +340,7 @@ After you connect, you might need to [switch to working with AWS resources in th
    + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open, and then choose **Show Options Menu** \(the settings icon\)\. Then choose **AWS Connection Settings**, **All Credentials**, **Edit AWS Credential file\(s\)**\.  
 ![\[Choosing the Edit AWS Credential files command\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. In the file, completely delete the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) \(including the named profile's name, access key ID, and secret access key\) for the connection that you want to delete\.
+1. In the file, completely delete the [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) \(specifying access keys or AWS SSO key\-value pairs\) for the connection that you want to delete\.
 
 1. Save and then close the file\. The AWS Toolkit for JetBrains removes the deleted connection from the **AWS Connection Settings** menu in both the status bar and in **AWS Explorer**\.
 
@@ -361,7 +456,7 @@ To deploy a serverless application that contains an AWS Lambda function, and dep
 
 1. Complete the [Deploy Serverless Application](deploy-serverless-application-dialog.md) dialog box, and then choose **Deploy**\. 
 
-   The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment\. It also adds the name of the stack to the **CloudFormation** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
+   The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment\. It also adds the name of the stack to the **CloudFormation** list in **AWS Explorer**\. If the deployment fails, you can try to determine why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
 
 After you deploy it, you can [run \(invoke\) the remote version of an AWS Lambda function](#key-tasks-lambda-remote) that is part of that deployed application\.
 
@@ -382,7 +477,7 @@ To deploy a serverless application that contains an AWS Lambda function, and dep
 
 1. Complete the [Deploy Serverless Application](deploy-serverless-application-dialog.md) dialog box, and then choose **Deploy**\. The AWS Toolkit for JetBrains updates the corresponding AWS CloudFormation stack for the deployment\. 
 
-   If the deployment fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
+   If the deployment fails, you can try to determine why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
 
 [Top](#key-tasks)
 
@@ -397,7 +492,7 @@ Before you can use this procedure to delete a serverless application, you must f
 1. Right\-click the name of the AWS CloudFormation stack that contains the serverless application you want to delete, and then choose **Delete CloudFormation Stack**\.  
 ![\[Choosing to delete the AWS CloudFormation stack for an AWS serverless application starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Enter the stack's name to confirm the deletion, and then choose **OK**\. If the stack deletion succeeds, the AWS Toolkit for JetBrains removes the stack name from the **CloudFormation** list in **AWS Explorer**\. If the stack deletion fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
+1. Enter the stack's name to confirm the deletion, and then choose **OK**\. If the stack deletion succeeds, the AWS Toolkit for JetBrains removes the stack name from the **CloudFormation** list in **AWS Explorer**\. If the stack deletion fails, you can try to determine why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
 
 [Top](#key-tasks)
 
@@ -430,7 +525,7 @@ Then with IntelliJ IDEA, PyCharm, WebStorm, or JetBrains Rider already running, 
 + [Open AWS Explorer](#key-tasks-open-explorer), if it isn't already open\. If you need to [switch to a different AWS Region](#key-tasks-switch-region) to create the function in, do that now\. Then right\-click **Lambda**, and choose **Create new AWS Lambda**\.  
 ![\[Creating an AWS Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-  Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\. The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment, and adds the function name to the **Lambda** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
+  Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\. The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment, and adds the function name to the **Lambda** list in **AWS Explorer**\. If the deployment fails, you can try to determine why by [viewing event logs for the stack](#key-tasks-cloudformation-logs)\.
 + Create a code file that implements a function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html)\. 
 
   If you need to [switch to a different AWS Region](#key-tasks-switch-region) to create the remote function to be run \(invoked\), do that now\. Then in the code file, choose the **Lambda** icon in the gutter next to the function handler, and then choose **Create new AWS Lambda**\. Complete the [Create Function](create-function-dialog.md) dialog box, and then choose **Create Function**\.  
@@ -646,5 +741,21 @@ See [Working with Amazon EventBridge schemas](eventbridge-schemas.md)\.
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon S3 buckets and objects in the account, as follows\.
 + [Work with Amazon S3 buckets](work-with-S3-buckets.md)
 + [Work with Amazon S3 objects](work-with-S3-objects.md)
+
+[Top](#key-tasks)
+
+## Work with Amazon RDS<a name="key-tasks-rds"></a>
+
+After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon RDS databases in the account, as follows\.
++ [Confirm prerequisites for accessing Amazon RDS databases](rds-access-prerequisities.md)
++ [Connect to an Amazon RDS database](rds-connection.md)
+
+[Top](#key-tasks)
+
+## Work with Amazon Redshift<a name="key-tasks-rs"></a>
+
+After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon Redshift clusters and databases in the account, as follows\.
++ [Confirm prerequisites for accessing Amazon Redshift clusters and databases](redshift-access-prerequisities.md)
++ [Connect to a database in an Amazon Redshift cluster](redshift-connection.md)
 
 [Top](#key-tasks)

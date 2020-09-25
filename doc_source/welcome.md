@@ -16,14 +16,14 @@ The AWS Toolkit for JetBrains is an open source plugin for the integrated develo
 ## What the AWS Toolkit for JetBrains includes<a name="supported-ides-toolkits"></a><a name="supported-ides"></a>
 
 The AWS Toolkit for JetBrains includes the following specific toolkits:
-+  [AWS Toolkit for CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)
-+  [AWS Toolkit for GoLand](https://www.jetbrains.com/go/) \(for Go development\)
-+  [AWS Toolkit for IntelliJ](https://aws.amazon.com/intellij/) \(for Java development\)
-+ [AWS Toolkit for WebStorm](https://aws.amazon.com/webstorm/) \(for Node\.js development\)
-+ [AWS Toolkit for Rider](https://aws.amazon.com/rider/) \(for \.NET development\)
-+ [AWS Toolkit for PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)
-+ [AWS Toolkit for PyCharm](https://aws.amazon.com/pycharm/) \(for Python development\)
-+  [AWS Toolkit for RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)
++  AWS Toolkit for [CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)
++  AWS Toolkit for [GoLand](https://www.jetbrains.com/go/) \(for Go development\)
++  AWS Toolkit for [IntelliJ](https://aws.amazon.com/intellij/) \(for Java development\)
++ AWS Toolkit for [WebStorm](https://aws.amazon.com/webstorm/) \(for Node\.js development\)
++ AWS Toolkit for [Rider](https://aws.amazon.com/rider/) \(for \.NET development\)
++ AWS Toolkit for [PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)
++ AWS Toolkit for [PyCharm](https://aws.amazon.com/pycharm/) \(for Python development\)
++  AWS Toolkit for [RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)
 
 **Note**  
 When there are meaningful differences in functionality between the AWS Toolkits for the supported JetBrains IDEs, we note them in this guide\.

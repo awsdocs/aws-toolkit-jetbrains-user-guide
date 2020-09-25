@@ -11,6 +11,6 @@ To deploy a serverless application that contains an AWS Lambda function, and dep
 
 1. Complete the [Deploy Serverless Application](deploy-serverless-application-dialog.md) dialog box, and then choose **Deploy**\. 
 
-   The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment\. It also adds the name of the stack to the **CloudFormation** list in **AWS Explorer**\. If the deployment fails, you can try to figure out why by [viewing event logs for the stack](key-tasks.md#key-tasks-cloudformation-logs)\.
+   The AWS Toolkit for JetBrains creates a corresponding AWS CloudFormation stack for the deployment\. It also adds the name of the stack to the **CloudFormation** list in **AWS Explorer**\. If the deployment fails, you can try to determine why by [viewing event logs for the stack](key-tasks.md#key-tasks-cloudformation-logs)\.
 
 After you deploy it, you can [run \(invoke\) the remote version of an AWS Lambda function](key-tasks.md#key-tasks-lambda-remote) that is part of that deployed application\.

@@ -9,4 +9,6 @@ The following topics describe how to use the AWS Toolkit for JetBrains to work w
 + [Amazon CloudWatch Logs](building-cloudwatch.md)
 + [Amazon ECS](ecs.md)
 + [Amazon EventBridge](eventbridge.md)
++ [Amazon RDS](accessing-rds.md)
++ [Amazon Redshift](accessing-redshift.md)
 + [Amazon S3](building-S3.md)
