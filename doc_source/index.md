@@ -63,7 +63,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Update Code dialog box](update-code-dialog.md)
    + [Update Configuration dialog box](update-configuration-dialog.md)
 + [Security for this AWS Product or Service](security.md)
-   + [Data protection in this AWS Product or Service](data-protection.md)
+   + [Data protection in AWS Toolkit for JetBrains](data-protection.md)
    + [Identity and Access Management for this AWS Product or Service](security-iam.md)
    + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
    + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
