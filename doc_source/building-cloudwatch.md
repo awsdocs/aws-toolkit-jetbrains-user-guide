@@ -7,3 +7,4 @@ The following topics describe how to use the AWS Toolkit for JetBrains to work w
 **Topics**
 + [Viewing CloudWatch log groups and log streams](viewing-CloudWatch-logs.md)
 + [Working with CloudWatch log events](working-CloudWatch-log-events.md)
++ [Working with CloudWatch Logs Insights](cloudwatch-log-insights.md)

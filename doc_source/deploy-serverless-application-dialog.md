@@ -18,6 +18,9 @@ Either **Create Stack** or **Update Stack** is *required* \(but not both\)\. Cho
 **S3 Bucket**  
 *Required*\. Choose an existing Amazon Simple Storage Service \(Amazon S3\) bucket in the connected AWS account for the AWS SAM CLI to use to deploy the AWS serverless application\. To create an Amazon S3 bucket in the account and have the AWS SAM CLI use that one instead, choose **Create**, and then follow the on\-screen instructions\.
 
+**ECR Repository**  
+*Required for `Image` package type only*\. Choose an existing Amazon ECR repository Uri in the connected AWS account for the AWS SAM CLI to use to deploy the AWS serverless application\. For information about Lambda package types, see [Lambda deployment packages](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) in the *AWS Lambda Developer Guide*\.
+
 **Require confirmation before deploying**  
 *Optional*\. If selected, instructs AWS CloudFormation to wait for you to finish creating or updating the corresponding stack by [executing the stack's current change set in AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-execute.html)\. If you don't execute this change set, the AWS serverless application won't move on to the deployment phase\.
 

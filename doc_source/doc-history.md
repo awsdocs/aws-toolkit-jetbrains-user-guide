@@ -6,6 +6,9 @@ For a detailed list of changes to the AWS Toolkit for JetBrains, see the [\.chan
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Working with Lambda container images with serverless applications now available](#doc-history) | Using the AWS Toolkit to work with Lambda container images with serverless applications is now available\. | December 1, 2020 | 
+| [Working with CloudWatch Logs Insights now available](#doc-history) | Using the AWS Toolkit for JetBrains to work with CloudWatch Logs Insights is now available\. | November 24, 2020 | 
+| [Working with Amazon SQS now available](#doc-history) | Using the AWS Toolkit for JetBrains to work with Amazon SQS is now available\. | November 24, 2020 | 
 | [Working with Amazon RDS and Amazon Redshift now available](#doc-history) | Using the AWS Toolkit to work with Amazon RDS and Amazon Redshift is now available\. | September 23, 2020 | 
 | [Support for AWS SSO now available](#doc-history) | Support for AWS Single Sign\-On \(AWS\) now available in AWS Toolkit\. | September 23, 2020 | 
 | [AWS Toolkits now available for four more JetBrains IDEs](#doc-history) | AWS Toolkits are now available as plug\-ins for four additional JetBrains IDEs:  [AWS Toolkit for CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)   [AWS Toolkit for GoLand](https://www.jetbrains.com/go/) \(for Go development\)   [AWS Toolkit for PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)   [AWS Toolkit for RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)   | May 28, 2020 | 

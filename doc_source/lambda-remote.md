@@ -17,6 +17,6 @@ To complete this procedure, you must first [install the ](key-tasks.md#key-tasks
 1. With **Lambda** open in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
 ![\[Running the remote version of a Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(remote function settings\)](run-debug-configurations-dialog-remote.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](key-tasks.md#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 

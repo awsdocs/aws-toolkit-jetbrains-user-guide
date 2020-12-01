@@ -559,7 +559,7 @@ To run \(invoke\) or debug the local version of a Lambda function, and run \(inv
    + With the **Project** tool window already open and displaying the project that contains the function, open the project's `template.yaml` file\. Choose the **Run** icon in the gutter next to the function's resource definition, and then choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.  
 ![\[Running or debugging the local version of a Lambda function by starting from the function definition in the AWS SAM template file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(local function settings\)](run-debug-configurations-dialog-local.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 
 
@@ -584,7 +584,7 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 1. With **Lambda** open in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
 ![\[Running the remote version of a Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(remote function settings\)](run-debug-configurations-dialog-remote.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 
 
@@ -688,7 +688,7 @@ Currently, you can't use the AWS Toolkit for JetBrains to change the settings fo
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon CloudWatch Logs in the account, as follows\.
 + [Viewing CloudWatch log groups and log streams](viewing-CloudWatch-logs.md)
-+ [Working with CloudWatch log events](working-CloudWatch-log-events.md)
++ [Working with CloudWatch log eventsWorking with CloudWatch Logs Insights](working-CloudWatch-log-events.md)
 
 [Top](#key-tasks)
 
@@ -716,7 +716,7 @@ As you enable code debugging in your AWS account for the first time, the AWS Too
 1. With the code you want to debug displayed, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. A service is displayed with a debug icon next to it\. This indicates the service is now enabled for cloud debugging\. Right\-click the service with the debug icon, and then choose **Debug**\.  
 ![\[Debugging an Amazon ECS service in the AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [**Edit configuration**](edit-configuration-dialog.md#edit-configuration-dialog-ecs) dialog box, and then choose **Debug**\.
+1. Complete the [**Edit configuration**](edit-configuration-dialog-ecs.md) dialog box, and then choose **Debug**\.
 **Note**  
 To make changes to this configuration later, on the menu bar, choose **Run**, **Edit Configurations**\. Then expand **Amazon ECS Service Cloud Debug**, and choose the service's name\. 
 

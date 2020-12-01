@@ -1,8 +1,14 @@
 # Update Configuration dialog box<a name="update-configuration-dialog"></a>
 
-The **Update Configuration** dialog box in the AWS Toolkit for JetBrains is displayed whenever you [change \(update\) the configuration for an AWS Lambda function](key-tasks.md#key-tasks-lambda-update)\.
+The **Update Configuration** dialog box in the AWS Toolkit for JetBrains is displayed whenever you [change \(update\) the configuration for an AWS Lambda function](key-tasks.md#key-tasks-lambda-update)\. The information you provide differs slightly depending on whether the project's Lambda function is of package type `Zip` or `Image`\.
 
-![\[The Update Configuration dialog box\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+**Update Configuration** dialog box for `Zip` package type:
+
+![\[The Update Configuration dialog box for Zip applications\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
+
+**Update Configuration** dialog box for `Image` package type:
+
+![\[The Update Configuration dialog box for Image applications\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
 The **Update Configuration** dialog box contains the following items\.
 
@@ -12,11 +18,14 @@ The **Update Configuration** dialog box contains the following items\.
 **Description**  
 *Optional*\. Any meaningful description about the function\. 
 
+**PackageType**  
+*Required*\. The Lambda function's package type, which can be either `Zip` or `Image`\.
+
 **Handler**  
-*Required*\. The identifier of the corresponding [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html)\. 
+*Required for `Zip` only*\. The identifier of the corresponding [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html)\. 
 
 **Runtime**  
-*Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for Lambda to use\.
+*Required for `Zip` only*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for Lambda to use\.
 
 **Timeout \(seconds\)**  
 *Required*\. The amount of time that Lambda allows a function to run before stopping it\. Specify an amount of up to 900 seconds \(15 minutes\)\.

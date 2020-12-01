@@ -3,12 +3,12 @@
 The **New Project** dialog box in the AWS Toolkit for JetBrains is displayed when you [create an AWS serverless application](key-tasks.md#key-tasks-sam-create)\.
 
 **Topics**
-+ [New Project dialog box \(IntelliJ IDEA\)](#new-project-dialog-intellij)
-+ [New Project dialog box \(PyCharm\)](#new-project-dialog-pycharm)
-+ [New Project dialog box \(WebStorm\)](#new-project-dialog-webstorm)
++ [New Project dialog box \(IntelliJ, PyCharm, and WebStorm\)](#new-project-dialog-intellij)
 + [New Project dialog box \(JetBrains Rider\)](#new-project-dialog-rider)
 
-## New Project dialog box \(IntelliJ IDEA\)<a name="new-project-dialog-intellij"></a>
+## New Project dialog box \(IntelliJ, PyCharm, and WebStorm\)<a name="new-project-dialog-intellij"></a>
+
+This screenshot is for Intellij, but field descriptions also apply to PyCharm and WebStorm\.
 
 ![\[The New Project dialog box for IntelliJ IDEA\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
@@ -20,6 +20,9 @@ The **New Project** dialog box contains the following items\.
 **Project location**  
 *Required*\. The location where IntelliJ IDEA will create the project\.
 
+**Package Type**  
+*Required*\. The Lambda function's deployment package type, which can be either `Zip` or `Image`\. For information about the difference between `Zip` and `Image` package types, see [Lambda deployment packages](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) in the *AWS Lambda Developer Guide*\.
+
 **Runtime**  
 *Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for AWS Lambda to use\.
 
@@ -28,51 +31,6 @@ The **New Project** dialog box contains the following items\.
 
 **Project SDK**  
 *Required*\. The Java SDK \(JDK\) to use\. For more information, see [Configure the JDK when creating a project](https://www.jetbrains.com/help/idea/creating-and-managing-projects.html#configure-jdk) on the IntelliJ IDEA Help website\.
-
-**Module name**  
-*Required*\. The name of the module to create\. For more information, see [Modules](https://www.jetbrains.com/help/idea/creating-and-managing-modules.html#Creating_and_Managing_Modules.xml) on the IntelliJ IDEA Help website\.
-
-**Content root**  
-*Required*\. The location where IntelliJ IDEA will create the project's content root\. For more information, see [Content roots](https://www.jetbrains.com/help/idea/content-roots.html#Content_roots.xml) on the IntelliJ IDEA Help website\.
-
-**Module file location**  
-*Required*\. The location where IntelliJ IDEA will create the module\. For more information, see [Modules](https://www.jetbrains.com/help/idea/creating-and-managing-modules.html#Creating_and_Managing_Modules.xml) on the IntelliJ IDEA Help website\.
-
-**Project format**  
-*Required*\. The format of the project that IntelliJ IDEA will create\. For more information, see [Project formats](https://www.jetbrains.com/help/idea/creating-and-managing-projects.html#project-formats) on the IntelliJ IDEA Help website\.
-
-## New Project dialog box \(PyCharm\)<a name="new-project-dialog-pycharm"></a>
-
-![\[The New Project dialog box for PyCharm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-
-The **New Project** dialog box contains the following items\.
-
-**Location**  
-*Required*\. The location where PyCharm will create the project\. For more information, see [Project](https://www.jetbrains.com/help/pycharm/project.html) on the PyCharm Help website\.
-
-**SAM Template**  
-*Required*\. The name of the AWS Serverless Application Model \(AWS SAM\) template to use\.
-
-**New environment using / Existing interpreter**  
-Either **New environment using** or **Existing interpreter** is *required* \(but not both\)\. Provides information about the interpreter that PyCharm will use when creating the project\. For more information, see [Configure a Python interpreter](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html#Configuring__language__Interpreter.xml) on the PyCharm Help website\.
-
-## New Project dialog box \(WebStorm\)<a name="new-project-dialog-webstorm"></a>
-
-![\[The New Project dialog box for WebStorm\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
-
-The **New Project** dialog box contains the following items\.
-
-**Location**  
-*Required*\. The location where WebStorm will create the project\.
-
-**Runtime**  
-*Required*\. The identifier of the [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) for AWS Lambda to use\.
-
-**SAM Template**  
-*Required*\. The name of the AWS SAM template to use\.
-
-**Node interpreter**  
-*Required*\. The location where the Node\.js interpreter is installed\.
 
 ## New Project dialog box \(JetBrains Rider\)<a name="new-project-dialog-rider"></a>
 
@@ -98,14 +56,14 @@ The **New Project** dialog box contains the following items\.
 **Create repository**  
 *Optional*\. If selected, creates a remote repository for the project with the specified provider\.
 
+**Package Type**  
+*Required*\. The Lambda function's package type, which can be either `Zip` or `Image`\. For information about the difference between `Zip` and `Image` package types, see [Lambda deployment packages](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) in the *AWS Lambda Developer Guide*\.
+
 **Runtime**  
 *Required*\. The Lambda runtime to be used\.
-
-**SAM CLI executable**  
-*Required*\. The location where the SAM CLI is installed\.
 
 **SAM Template**  
 *Required*\. The name of the SAM template to use to create the project\.
 
 **Resulting project structure**  
-*Required*\. The paths for the project's directories and files that will be created\.
+*Informative; non\-editable*\. The paths for the project's directories and files that will be created\.
