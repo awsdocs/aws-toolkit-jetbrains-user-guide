@@ -65,7 +65,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Run/Debug Configurations dialog box](run-debug-configurations-dialog.md)
       + [Run/Debug Configurations dialog box (local function settings)](run-debug-configurations-dialog-local.md)
       + [Run/Debug Configurations dialog box (remote function settings)](run-debug-configurations-dialog-remote.md)
-      + [Edit Configuration dialog box (Amazon ECS cluster)](edit-configuration-dialog-ecs.md)
+      + [Edit configuration dialog box (Amazon ECS cluster)](edit-configuration-dialog-ecs.md)
    + [Update Code dialog box](update-code-dialog.md)
    + [Update Configuration dialog box](update-configuration-dialog.md)
 + [Security for this AWS Product or Service](security.md)

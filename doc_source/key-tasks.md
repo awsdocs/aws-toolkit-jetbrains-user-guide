@@ -401,7 +401,7 @@ After you open **AWS Explorer** for the first time, use it to [connect to an AWS
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use it to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with AWS serverless applications in an account, as follows:
 + [Create a serverless application](#key-tasks-sam-create)
 + [Deploy a serverless application](#key-tasks-sam-deploy)
-+ [Change \(update\) the settings for a serverless application](#key-tasks-sam-update)
++ [Update the settings for a serverless application](#key-tasks-sam-update)
 + [Delete a serverless application](#key-tasks-sam-delete)
 
 [Top](#key-tasks)
@@ -462,7 +462,7 @@ After you deploy it, you can [run \(invoke\) the remote version of an AWS Lambda
 
 [Top](#key-tasks)
 
-### Change \(update\) the settings for a serverless application<a name="key-tasks-sam-update"></a>
+### Update the settings for a serverless application<a name="key-tasks-sam-update"></a>
 
 Before you can use this procedure to change settings for a serverless application, you must first [deploy the AWS serverless application](#key-tasks-sam-deploy) that you want to change\. Then follow these steps\.
 **Note**  
@@ -502,7 +502,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 + [Create a function](#key-tasks-lambda-create)
 + [Run \(invoke\) or debug the local version of a function](#key-tasks-lambda-local)
 + [Run \(invoke\) the remote version of a function](#key-tasks-lambda-remote)
-+ [Change \(update\) the configuration for a function](#key-tasks-lambda-update)
++ [Update the configuration for a function](#key-tasks-lambda-update)
 + [Delete a function](#key-tasks-lambda-delete)
 
 [Top](#key-tasks)
@@ -590,7 +590,7 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 
 [Top](#key-tasks)
 
-### Change \(update\) the configuration for a function<a name="key-tasks-lambda-update"></a>
+### Update the configuration for a function<a name="key-tasks-lambda-update"></a>
 
 Do one of the following:
 + With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.
@@ -654,7 +654,7 @@ Currently, you can't use the AWS Toolkit for JetBrains to create an AWS CloudFor
 
 ### Change stack settings<a name="key-tasks-cloudformation-change"></a>
 
-Currently, you can't use the AWS Toolkit for JetBrains to change the settings for an AWS CloudFormation stack directly\. However, you can [change \(update\) the settings for an AWS serverless application](#key-tasks-sam-update) that belongs to a stack, or [change \(update\) the configuration for an AWS Lambda function](#key-tasks-lambda-update) that belongs to a stack\. Then you [deploy that serverless application](#key-tasks-sam-deploy) again or deploy that function, as part of the lifecycle of [running \(invoking\) the remote version of that function](#key-tasks-lambda-remote), again\. 
+Currently, you can't use the AWS Toolkit for JetBrains to change the settings for an AWS CloudFormation stack directly\. However, you can [update the settings for an AWS serverless application](#key-tasks-sam-update) that belongs to a stack, or [update the configuration for an AWS Lambda function](#key-tasks-lambda-update) that belongs to a stack\. Then you [deploy that serverless application](#key-tasks-sam-deploy) again or deploy that function, as part of the lifecycle of [running \(invoking\) the remote version of that function](#key-tasks-lambda-remote), again\. 
 
 [Top](#key-tasks)
 

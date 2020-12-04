@@ -1,6 +1,6 @@
 # User interface reference for the AWS Toolkit for JetBrains<a name="ui-reference"></a>
 
-Use the following information to help you work with the AWS Toolkit for JetBrains user interface\.
+For help working with the AWS Toolkit for JetBrains user interface, see the following topics\.
 
 **Topics**
 + [AWS Explorer](aws-explorer.md)
