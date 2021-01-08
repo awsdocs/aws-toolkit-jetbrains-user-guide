@@ -116,7 +116,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install), use the t
 
 ### Connect to an AWS Account for the first time<a name="key-tasks-first-connect"></a>
 
-We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\.Depending on your connection option, you must have completed the following prerequisites:
+We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\. Depending on your connection option, you must have completed the following prerequisites:
 + AWS security credentials – Created an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
 + AWS SSO – Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information on this process, see the [Getting started](AWS Single Sign-On User Guidegetting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
 **Note**  
