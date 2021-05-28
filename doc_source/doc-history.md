@@ -6,7 +6,9 @@ For a detailed list of changes to the AWS Toolkit for JetBrains, see the [\.chan
 
 | Change | Description | Date | 
 | --- |--- |--- |
+
 | [Working with AWS App Runner now available](#doc-history) | Using the AWS Toolkit for JetBrains to work with App Runner to deploy from source code or a container image directly to a scalable and secure web application in the AWS Cloud\. | May 26, 2021 | 
+
 | [Working with Lambda container images with serverless applications now available](#doc-history) | Using the AWS Toolkit to work with AWS Lambda container images with serverless applications is now available\. | December 1, 2020 | 
 | [Working with CloudWatch Logs Insights now available](#doc-history) | Using the AWS Toolkit for JetBrains to work with CloudWatch Logs Insights is now available\. | November 24, 2020 | 
 | [Working with Amazon SQS now available](#doc-history) | Using the AWS Toolkit for JetBrains to work with Amazon Simple Queue Service \(Amazon SQS\) is now available\. | November 24, 2020 | 

@@ -8,8 +8,6 @@ The **New Project** dialog box in the AWS Toolkit for JetBrains is displayed whe
 
 ## New Project dialog box \(IntelliJ IDEA, PyCharm, and WebStorm\)<a name="new-project-dialog-intellij"></a>
 
-
-
 **Note**  
 The following screenshot shows the **New Project** dialog box for IntelliJ IDEA, but the field descriptions also apply to PyCharm and WebStorm\.
 
