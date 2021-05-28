@@ -1,6 +1,8 @@
 # What is the AWS Toolkit for JetBrains?<a name="welcome"></a>
 
 
+
+
 |  | 
 | --- |
 |  To start using the AWS Toolkit for JetBrains right away, skip ahead to the [installation](key-tasks.md#key-tasks-install) and [first\-time connection](key-tasks.md#key-tasks-first-connect) instructions\.  | 
@@ -24,6 +26,7 @@ The AWS Toolkit for JetBrains includes the following specific toolkits:
 + AWS Toolkit for [PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)
 + AWS Toolkit for [PyCharm](https://aws.amazon.com/pycharm/) \(for Python development\)
 +  AWS Toolkit for [RubyMine](https://www.jetbrains.com/ruby/) \(for Ruby development\)
++  AWS Toolkit for [DataGrip](https://www.jetbrains.com/datagrip/) \(for database management\)
 
 **Note**  
 When there are meaningful differences in functionality between the AWS Toolkits for the supported JetBrains IDEs, we note them in this guide\.

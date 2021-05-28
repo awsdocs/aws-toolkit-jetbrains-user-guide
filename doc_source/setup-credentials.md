@@ -18,11 +18,11 @@ Complete the following procedures to make an initial connection, switch between 
 
 You should have already [installed the AWS Toolkit for JetBrains](key-tasks.md#key-tasks-install)\. Depending on your connection option, you must have completed the following prerequisites:
 + AWS security credentials—Created an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
-+ AWS SSO—Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information about this process, see the [Getting started](AWS Single Sign-On User Guidegetting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
++ AWS SSO—Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information about this process, see the [Getting started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
 **Note**  
 We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
 You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
-If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 + To open the credentials for editing, do one of the following:
   + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[AWS no credentials selected on the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
@@ -80,6 +80,8 @@ For more information, see [AWS CLI configuration variables](https://docs.aws.ama
 With AWS SSO, you define a named profile in the `credentials` file or `config` that you use to retrieve temporary credentials for your AWS account\. The profile definition specifies the SSO user portal as well as the AWS account and IAM role associated with the user requesting access\.
 
 AWS Toolkit for JetBrains calls the AWS CLI `login` command on your behalf\. \(The named profile that you added is passed as an option to `login`\)\. If the login is successful, your default browser is launched and verifies your AWS SSO login\. You can then start accessing the AWS resources available in your account\.
+
+
 
 1. In the `credentials`/`config` file, under `[default]`, add a template for a named profile\. 
 
@@ -141,11 +143,11 @@ You can also have [more than one connection](key-tasks.md#key-tasks-multiple-con
 
 Depending on the additional connection you want to add, you must first have completed one of the following tasks:
 + Created an additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\) or AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
-+ Enabled [AWS SSO access](AWS Single Sign-On User Guidegetting-started.html) for the additional user's AWS account\.
++ Enabled [AWS SSO access](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) for the additional user's AWS account\.
 **Note**  
 We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
 You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
-If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 
 1. [Connect for the first time](key-tasks.md#key-tasks-first-connect), if you have not done so already\.
 

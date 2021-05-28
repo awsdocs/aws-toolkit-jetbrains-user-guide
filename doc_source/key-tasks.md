@@ -118,11 +118,11 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install), use the t
 
 We assume that you already [installed the AWS Toolkit for JetBrains](#key-tasks-install)\.Depending on your connection option, you must have completed the following prerequisites:
 + AWS security credentials – Created an [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\), or an AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user in IAM, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
-+ AWS SSO – Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information on this process, see the [Getting started](AWS Single Sign-On User Guidegetting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
++ AWS SSO – Configured single sign\-on by enabling AWS SSO, managing your identity source, and assigning SSO access to AWS accounts\. For more information on this process, see the [Getting started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) chapter of the *AWS Single Sign\-On User Guide*\.
 **Note**  
 We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
 You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
-If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 + To open the credentials for editing, do one of the following:
   + On the status bar, choose **AWS: No credentials selected**, and then choose **Edit AWS Credential file\(s\)**\.  
 ![\[AWS no credentials selected on the status bar\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)  
@@ -181,6 +181,8 @@ With AWS SSO, you define a named profile in the `credentials` file or `config` t
 
 AWS Toolkit for JetBrains calls the AWS CLI `login` command on your behalf\. \(The named profile that you added is passed as an option to `login`\)\. If the login is successful, your default browser is launched and verifies your AWS SSO login\. You can then start accessing the AWS resources available in your account\.
 
+
+
 1. In the `credentials`/`config` file, under `[default]`, add a template for a named profile\. 
 
    You can use an example like the one that follows as a template for a typical AWS SSO profile\.
@@ -233,11 +235,11 @@ After you connect, the AWS Toolkit for JetBrains selects the default AWS Region 
 
 Depending on the additional connection you want to add, you must first have completed one of the following tasks:
 + Created an additional [access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) \(which contains both an *access key ID* value and a *secret access key* value\) for a user in IAM \(which we recommend\) or AWS account root user \(which we strongly discourage\)\. If you don't have an access key for a user IAM already, [create one](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)\.
-+ Enabled [AWS SSO access](AWS Single Sign-On User Guidegetting-started.html) for the additional user's AWS account\.
++ Enabled [AWS SSO access](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) for the additional user's AWS account\.
 **Note**  
 We recommend storing sensitive credential information, such as named profiles that include access keys, in the `credentials` file\. Less sensitive configuration options, such as named profiles that use AWS SSO for authentication, are normally stored in the `config` file\.  
 You can store all your named profiles in a single file\. If you're using both `credentials` and `config` files, `credentials` is opened by default in the IDE\.   
-If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](AWS Command Line Interface User Guidecli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
+If there are credentials in both files for a profile sharing the same name, the keys in the `credentials` file take precedence\. For more information, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 
 1. [Connect for the first time](#key-tasks-first-connect), if you have not done so already\.
 
@@ -401,7 +403,7 @@ After you open **AWS Explorer** for the first time, use it to [connect to an AWS
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use it to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with AWS serverless applications in an account, as follows:
 + [Create a serverless application](#key-tasks-sam-create)
 + [Deploy a serverless application](#key-tasks-sam-deploy)
-+ [Change \(update\) the settings for a serverless application](#key-tasks-sam-update)
++ [Update the settings for a serverless application](#key-tasks-sam-update)
 + [Delete a serverless application](#key-tasks-sam-delete)
 
 [Top](#key-tasks)
@@ -462,7 +464,7 @@ After you deploy it, you can [run \(invoke\) the remote version of an AWS Lambda
 
 [Top](#key-tasks)
 
-### Change \(update\) the settings for a serverless application<a name="key-tasks-sam-update"></a>
+### Update the settings for a serverless application<a name="key-tasks-sam-update"></a>
 
 Before you can use this procedure to change settings for a serverless application, you must first [deploy the AWS serverless application](#key-tasks-sam-deploy) that you want to change\. Then follow these steps\.
 **Note**  
@@ -502,7 +504,7 @@ After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then u
 + [Create a function](#key-tasks-lambda-create)
 + [Run \(invoke\) or debug the local version of a function](#key-tasks-lambda-local)
 + [Run \(invoke\) the remote version of a function](#key-tasks-lambda-remote)
-+ [Change \(update\) the configuration for a function](#key-tasks-lambda-update)
++ [Update the configuration for a function](#key-tasks-lambda-update)
 + [Delete a function](#key-tasks-lambda-delete)
 
 [Top](#key-tasks)
@@ -559,7 +561,7 @@ To run \(invoke\) or debug the local version of a Lambda function, and run \(inv
    + With the **Project** tool window already open and displaying the project that contains the function, open the project's `template.yaml` file\. Choose the **Run** icon in the gutter next to the function's resource definition, and then choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.  
 ![\[Running or debugging the local version of a Lambda function by starting from the function definition in the AWS SAM template file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(local function settings\)](run-debug-configurations-dialog-local.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 
 
@@ -584,13 +586,13 @@ To complete this procedure, you must first [install the AWS Toolkit for JetBrain
 1. With **Lambda** open in **AWS Explorer**, right\-click the name of the function, and then choose **Run '\[Remote\]'**\.  
 ![\[Running the remote version of a Lambda function by starting from AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(remote function settings\)](run-debug-configurations-dialog-remote.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 
 
 [Top](#key-tasks)
 
-### Change \(update\) the configuration for a function<a name="key-tasks-lambda-update"></a>
+### Update the configuration for a function<a name="key-tasks-lambda-update"></a>
 
 Do one of the following:
 + With the code file open that contains the function handler for [Java](https://docs.aws.amazon.com/lambda/latest/dg/java-programming-model-handler-types.html), [Python](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html), [Node\.js](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html), or [C\#](https://docs.aws.amazon.com/lambda/latest/dg/dotnet-programming-model-handler-types.html), on the main menu, choose **Run**, **Edit Configurations**\. Complete the [Run/Debug Configurations](run-debug-configurations-dialog.md) dialog box, and then choose **OK**\.
@@ -654,7 +656,7 @@ Currently, you can't use the AWS Toolkit for JetBrains to create an AWS CloudFor
 
 ### Change stack settings<a name="key-tasks-cloudformation-change"></a>
 
-Currently, you can't use the AWS Toolkit for JetBrains to change the settings for an AWS CloudFormation stack directly\. However, you can [change \(update\) the settings for an AWS serverless application](#key-tasks-sam-update) that belongs to a stack, or [change \(update\) the configuration for an AWS Lambda function](#key-tasks-lambda-update) that belongs to a stack\. Then you [deploy that serverless application](#key-tasks-sam-deploy) again or deploy that function, as part of the lifecycle of [running \(invoking\) the remote version of that function](#key-tasks-lambda-remote), again\. 
+Currently, you can't use the AWS Toolkit for JetBrains to change the settings for an AWS CloudFormation stack directly\. However, you can [update the settings for an AWS serverless application](#key-tasks-sam-update) that belongs to a stack, or [update the configuration for an AWS Lambda function](#key-tasks-lambda-update) that belongs to a stack\. Then you [deploy that serverless application](#key-tasks-sam-deploy) again or deploy that function, as part of the lifecycle of [running \(invoking\) the remote version of that function](#key-tasks-lambda-remote), again\. 
 
 [Top](#key-tasks)
 
@@ -688,7 +690,7 @@ Currently, you can't use the AWS Toolkit for JetBrains to change the settings fo
 
 After you [install the AWS Toolkit for JetBrains](#key-tasks-install) and then use the toolkit to [connect to an AWS account for the first time](#key-tasks-first-connect), you can use the toolkit to work with Amazon CloudWatch Logs in the account, as follows\.
 + [Viewing CloudWatch log groups and log streams](viewing-CloudWatch-logs.md)
-+ [Working with CloudWatch log events](working-CloudWatch-log-events.md)
++ [Working with CloudWatch log eventsWorking with CloudWatch Logs Insights](working-CloudWatch-log-events.md)
 
 [Top](#key-tasks)
 
@@ -716,7 +718,7 @@ As you enable code debugging in your AWS account for the first time, the AWS Too
 1. With the code you want to debug displayed, in the **AWS Explorer**, expand **ECS**, expand **Clusters**, and then expand your cluster\. A service is displayed with a debug icon next to it\. This indicates the service is now enabled for cloud debugging\. Right\-click the service with the debug icon, and then choose **Debug**\.  
 ![\[Debugging an Amazon ECS service in the AWS Explorer\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [**Edit configuration**](edit-configuration-dialog.md#edit-configuration-dialog-ecs) dialog box, and then choose **Debug**\.
+1. Complete the [**Edit configuration**](edit-configuration-dialog-ecs.md) dialog box, and then choose **Debug**\.
 **Note**  
 To make changes to this configuration later, on the menu bar, choose **Run**, **Edit Configurations**\. Then expand **Amazon ECS Service Cloud Debug**, and choose the service's name\. 
 

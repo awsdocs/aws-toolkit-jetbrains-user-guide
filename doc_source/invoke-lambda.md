@@ -10,6 +10,6 @@ To run \(invoke\) or debug the local version of a Lambda function, and run \(inv
    + With the **Project** tool window already open and displaying the project that contains the function, open the project's `template.yaml` file\. Choose the **Run** icon in the gutter next to the function's resource definition, and then choose **Run '\[Local\]'** or **Debug '\[Local\]'**\.  
 ![\[Running or debugging the local version of a Lambda function by starting from the function definition in the AWS SAM template file\]](http://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/)
 
-1. Complete the [Edit configuration](edit-configuration-dialog.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
+1. Complete the [Edit configuration \(local function settings\)](run-debug-configurations-dialog-local.md) dialog box if it's displayed, and then choose **Run** or **Debug**\. Results are displayed in the **Run** or **Debug** tool window\.
    + If the **Edit configuration** dialog box doesn't appear and you want to change the existing configuration, first [change its configuration](key-tasks.md#key-tasks-lambda-update), and then repeat this procedure from the beginning\. 
    + If the configuration details are missing, expand **Templates**, **AWS Lambda**, and then choose **Local**\. Choose **OK**, and then repeat this procedure from the beginning\. 
