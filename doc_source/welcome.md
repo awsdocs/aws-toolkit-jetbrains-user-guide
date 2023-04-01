@@ -20,7 +20,7 @@ The AWS Toolkit for JetBrains is an open source plugin for the integrated develo
 The AWS Toolkit for JetBrains includes the following specific toolkits:
 +  AWS Toolkit for [CLion](https://www.jetbrains.com/clion/) \(for C & C\+\+ development\)
 +  AWS Toolkit for [GoLand](https://www.jetbrains.com/go/) \(for Go development\)
-+  AWS Toolkit for [IntelliJ](https://aws.amazon.com/intellij/) \(for Java development\)
++  AWS Toolkit for [IntelliJ IDEA](https://aws.amazon.com/intellij/) \(for Java development\)
 + AWS Toolkit for [WebStorm](https://aws.amazon.com/webstorm/) \(for Node\.js development\)
 + AWS Toolkit for [Rider](https://aws.amazon.com/rider/) \(for \.NET development\)
 + AWS Toolkit for [PhpStorm ](https://www.jetbrains.com/php/) \(for PHP development\)
